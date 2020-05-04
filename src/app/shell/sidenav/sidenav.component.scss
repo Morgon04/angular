@@ -1,0 +1,38 @@
+.sidenav-item-highlight-class {
+    color: #667256;
+    position: relative;
+    font-weight: 500;
+}
+
+.sidenav-spacer {
+    margin-top: 10px;
+}
+
+.list-item {
+
+    margin-bottom: 10px;
+    height: 40px !important;
+    text-decoration: none;
+
+    &:hover {
+        @extend .sidenav-item-highlight-class;
+    }
+
+    &.active {
+        @extend .sidenav-item-highlight-class;
+
+        &::before {
+            content: '';
+            position: absolute;
+            background-color: #566246;
+            width: 3px;
+            height: 99%;
+            bottom: 0;
+            left: 0px;
+        }
+    }
+
+    &:last-child {
+        margin-bottom: 0;
+    }
+}

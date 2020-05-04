@@ -1,0 +1,17 @@
+<div class="navbar-container">
+    <app-header (eventToggle)="snav.toggle()"></app-header>
+
+
+    <mat-sidenav-container>
+        <mat-sidenav class="sidenav" fixedTopGap="64" [mode]="'side'" [opened]="isSidenavOpened"
+            [fixedInViewport]="true" #snav>
+            <app-sidenav></app-sidenav>
+        </mat-sidenav>
+
+        <mat-sidenav-content>
+            <div class="sidenav-content">
+                <router-outlet></router-outlet>
+            </div>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>

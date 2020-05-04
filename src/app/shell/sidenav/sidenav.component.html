@@ -1,0 +1,10 @@
+<div class="sidenav-spacer"></div>
+<mat-list>
+    <div mat-subheader class="sidenav-header">Topics</div>
+
+    <a mat-list-item *ngFor="let items of publicSideNavItems" class="list-item" [routerLink]="items.url"
+        routerLinkActive="active" (click)="setHeaderText(items)">
+        {{ items.name }}
+    </a>
+
+</mat-list>

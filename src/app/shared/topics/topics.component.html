@@ -1,0 +1,11 @@
+<div class="topics-container">
+    <h3 class="font-bold-600">Topics to covered</h3>
+
+    <div class="topics-card-container">
+        <div class="card" *ngFor="let topic of topicsList;let i=index" (mouseover)="mouseOvered[i]=true"
+            (mouseout)="mouseOvered[i]=false" [class.mat-elevation-z4]="mouseOvered[i]"
+            [class.mat-elevation-z2]="!mouseOvered[i]">
+            {{ topic.name }}
+        </div>
+    </div>
+</div>
