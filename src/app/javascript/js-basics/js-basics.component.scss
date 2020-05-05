@@ -1,0 +1,31 @@
+.basics-content {
+    text-align: justify;
+    font-size: 15px;
+    line-height: 1.5;
+    padding: 15px 75px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    h1 {
+        margin-bottom: 10px;
+    }
+
+    p {
+        margin-bottom: 20px;
+
+        &:first-child {
+            margin-top: 20px;
+        }
+    }
+
+    .bullet {
+        padding-right: 20px;
+
+        li {
+            margin-bottom: 10px;
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

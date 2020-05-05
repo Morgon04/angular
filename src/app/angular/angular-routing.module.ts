@@ -17,7 +17,7 @@ const angularRoutes: Routes = [
       data: { title: 'Angular' },
       children: [
         { path: '', redirectTo: 'topics', pathMatch: 'full' },
-        { path: 'topics', component: TopicsComponent, data: { title: 'Javascript Topics' }, }
+        { path: 'topics', component: TopicsComponent, data: { title: 'Angular Topics' }, }
       ]
     }
   ])

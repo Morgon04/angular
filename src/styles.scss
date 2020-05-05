@@ -12,12 +12,15 @@ body {
 }
 
 .landing-page {
+
     .welcome-text {
         display: flex;
         justify-content: center;
-        margin-top: 20px;
+        align-items: center;
         font-size: 16px;
         font-weight: 600;
+        margin-top: 10px;
+        width: 55%;
     }
 }
 
@@ -26,6 +29,6 @@ body {
     margin: 0 auto;
 }
 
-.font-bold-600{
+.font-bold-600 {
     font-weight: 600 !important;
 }

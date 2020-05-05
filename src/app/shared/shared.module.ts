@@ -1,3 +1,4 @@
+import { RouterModule } from '@angular/router';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { TopicsComponent } from './topics/topics.component';
@@ -9,7 +10,8 @@ import { TopicsComponent } from './topics/topics.component';
     TopicsComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
+    RouterModule
   ],
   exports: [
     TopicsComponent

@@ -20,7 +20,7 @@ export class TopicsComponent implements OnInit {
 
   public initializeTopics(): Topics[] {
     return [
-      { name: 'Js Basics' },
+      { name: 'Js Basics', url: '/javascript/basics' },
       { name: 'Js Function' },
       { name: 'Js Array []' },
       { name: 'Js Objects {}' },

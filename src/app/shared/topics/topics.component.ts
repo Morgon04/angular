@@ -1,6 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
-import { Topics } from '../_model/topics';
+import { Router } from '@angular/router';
 
+import { Topics } from '../_model/topics';
 
 @Component({
   selector: 'app-shared-topics',
@@ -12,10 +13,16 @@ export class TopicsComponent implements OnInit {
   @Input() public topicsList: Topics[] = [];
 
   public mouseOvered: boolean[] = [];
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     this.topicsList.forEach((_, idx) => this.mouseOvered[idx] = false);
+  }
+
+  public navigateTo(topic: Topics): void {
+    this.router.navigateByUrl(topic.url);
   }
 
 }

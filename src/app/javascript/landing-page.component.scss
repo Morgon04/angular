@@ -1,0 +1,37 @@
+
+.heading {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.le-breadcrum {
+    display: flex;
+    list-style: none;
+    flex-wrap: wrap;
+    padding: .75rem 1rem;
+
+    .item+.item {
+
+        padding-left: .5rem;
+
+        &::before {
+            display: inline-block;
+            padding-right: .5rem;
+            color: #6c757d;
+            content: "/";
+        }
+    }
+
+    .item {
+        color: #007bff;
+        font-weight: 500;
+
+        &.active {
+            color: #566246;
+        }
+    }
+
+
+}
