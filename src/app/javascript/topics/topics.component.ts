@@ -21,7 +21,7 @@ export class TopicsComponent implements OnInit {
   public initializeTopics(): Topics[] {
     return [
       { name: 'Js Basics', url: '/javascript/basics' },
-      { name: 'Js Function' },
+      { name: 'Js Function', url: '/javascript/functions' },
       { name: 'Js Array []' },
       { name: 'Js Objects {}' },
       { name: 'ES6 Promises' },

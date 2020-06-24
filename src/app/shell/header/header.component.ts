@@ -22,7 +22,7 @@ export class HeaderComponent implements OnInit {
     this.shellService.headerText$
       .subscribe((text: string) => {
         if (text) {
-          this.headerText = `Learning - ${text}`;
+          this.headerText = text;
         }
       });
   }

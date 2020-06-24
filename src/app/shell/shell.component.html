@@ -3,8 +3,8 @@
 
 
     <mat-sidenav-container>
-        <mat-sidenav class="sidenav" fixedTopGap="64" [mode]="'side'" [opened]="isSidenavOpened"
-            [fixedInViewport]="true" #snav>
+        <mat-sidenav class="sidenav" fixedTopGap="64" [opened]="!mobileQuery.matches" [mode]="mobileQuery.matches ? 'over' : 'side'"
+        [fixedInViewport]="mobileQuery.matches" #snav>
             <app-sidenav></app-sidenav>
         </mat-sidenav>
 

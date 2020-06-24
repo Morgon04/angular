@@ -8,20 +8,22 @@ import { MatCardModule } from '@angular/material/card';
 // Routing Module Import
 import { JavascriptRoutingModule } from './javascript-routing.module';
 
+// Shared Module Import
+import { SharedModule } from './../shared/shared.module';
+import { CoreModule } from '../core/core.module';
+
 // Javascript Components Import
 import { LandingPageComponent } from './landing-page.component';
 import { TopicsComponent } from './topics/topics.component';
 import { JsBasicsComponent } from './js-basics/js-basics.component';
-
-// Shared Module Import
-import { SharedModule } from './../shared/shared.module';
-
+import { JsFunctionsComponent } from './js-functions/js-functions.component';
 
 @NgModule({
   declarations: [
     LandingPageComponent,
     TopicsComponent,
-    JsBasicsComponent
+    JsBasicsComponent,
+    JsFunctionsComponent
   ],
   imports: [
     CommonModule,
@@ -31,7 +33,10 @@ import { SharedModule } from './../shared/shared.module';
     MatCardModule,
 
     // Shared Module
-    SharedModule
+    SharedModule,
+
+    // Core Module
+    CoreModule
   ]
 })
 export class JavascriptModule { }

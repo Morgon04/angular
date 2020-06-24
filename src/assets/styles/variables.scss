@@ -1,0 +1,56 @@
+/**
+ All variables should start with $ and le like $le
+*/
+
+// Font Size variables
+$le-font-size-12px: 12px;
+$le-font-size-14px: 14px;
+$le-font-size-15px: 15px;
+$le-font-size-16px: 16px;
+$le-font-size-18px: 18px;
+$le-font-size-20px: 20px;
+$le-font-size-22px: 22px;
+$le-font-size-24px: 24px;
+
+// Font Weight variables
+$le-font-weight-300:300;
+$le-font-weight-400:400;
+$le-font-weight-500:500;
+$le-font-weight-600:600;
+$le-font-weight-800:800;
+
+// Mani Colors Variables
+$le-main-color: #247ba0;
+
+// Width px properties
+$le-width-200px: 200px;
+$le-width-250px: 250px;
+$le-width-300px: 300px;
+$le-width-350px: 350px;
+$le-width-400px: 400px;
+$le-width-450px: 450px;
+$le-width-500px: 500px;
+
+// text Variables
+$le-text-align-center: center;
+$le-text-align-justify: justify;
+
+// Flex Variables
+$le-display-flex: flex;
+
+// Flex Wrap
+$le-flex-wrap: wrap;
+$le-flex-wrap-reverse: wrap-reverse;
+
+// Flex Directions variables
+$le-flex-row: row;
+$le-flex-column: column;
+
+// Justify Content Variables
+$le-justify-content-center: $le-text-align-center;
+$le-justify-content-space-btw: space-between;
+$le-justify-content-space-around: space-around;
+
+// Align Content Variables
+$le-align-items-center: $le-text-align-center;
+

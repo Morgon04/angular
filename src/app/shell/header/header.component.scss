@@ -1,11 +1,14 @@
+@import "~src/assets/styles/variables.scss";
+
 .navbar {
     z-index: 2;
-    background-color: #566246;
+    background-color: $le-main-color;
     // box-shadow: 6px 0 6px rgba(0, 0, 0, .1);
 
     .toolbar-heading {
         color: white;
         padding-left: 5px;
+        text-decoration: none;
     }
 }
 

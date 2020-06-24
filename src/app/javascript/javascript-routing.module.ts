@@ -1,4 +1,4 @@
-
+// Angular Import
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 
@@ -9,6 +9,7 @@ import { ShellService } from '../shell/shell.service';
 import { LandingPageComponent } from './landing-page.component';
 import { TopicsComponent } from './topics/topics.component';
 import { JsBasicsComponent } from './js-basics/js-basics.component';
+import { JsFunctionsComponent } from './js-functions/js-functions.component';
 
 const javascriptRoutes: Routes = [
   ShellService.child(
@@ -18,9 +19,32 @@ const javascriptRoutes: Routes = [
         component: LandingPageComponent,
         data: { title: 'Javascript' },
         children: [
-          { path: '', redirectTo: 'topics', pathMatch: 'full' },
-          { path: 'topics', component: TopicsComponent, data: { title: 'Javascript Topics' }, },
-          { path: 'basics', component: JsBasicsComponent, data: { title: 'Javascript Basics' }, }
+          {
+            path: '',
+            redirectTo: 'topics',
+            pathMatch: 'full'
+          },
+          {
+            path: 'topics',
+            component: TopicsComponent,
+            data: {
+              title: 'Javascript Topics'
+            }
+          },
+          {
+            path: 'basics',
+            component: JsBasicsComponent,
+            data: {
+              title: 'Javascript Basics'
+            },
+          },
+          {
+            path: 'functions',
+            component: JsFunctionsComponent,
+            data: {
+              title: 'Javascript Functions'
+            },
+          }
         ]
       }
     ]

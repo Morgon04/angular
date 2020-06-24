@@ -1,5 +1,4 @@
-import { Component, OnInit, ViewEncapsulation } from '@angular/core';
-import { Router } from '@angular/router';
+import { Component, OnInit } from '@angular/core';
 
 // Service Import
 import { ShellService } from '../shell.service';
@@ -19,7 +18,7 @@ export class SidenavComponent implements OnInit {
   public publicSideNavItems: SideNav[] = [];
 
   constructor(
-    private shellService: ShellService
+    private shellService: ShellService,
   ) { }
 
   public ngOnInit(): void {
@@ -34,8 +33,7 @@ export class SidenavComponent implements OnInit {
   }
 
   public setHeaderText(item: SideNav): void {
-    this.shellService.setHeaderText(item.name);
-    // this.router.navigateByUrl(item.url);
+    this.shellService.setHeaderText(`Learning - ${item.name}`);
   }
 
 }

@@ -1,0 +1,120 @@
+<mat-card class="functions-card">
+    <mat-card-header>
+        <mat-card-title>
+            What is Javascript Functions
+        </mat-card-title>
+    </mat-card-header>
+    <mat-card-content class="functions-card-content paragraph-style">
+        <p>
+            Functions are one of the fundamental building blocks in JavaScript.
+            A function is a JavaScript procedure—a set of statements that performs
+            a task or calculates a value
+        </p>
+
+        <ul>
+            <li *ngFor="let fnTopics of functionsTopicsList">
+                <a [href]="url+'#'+fnTopics.id">{{ fnTopics.name }}</a>
+
+            </li>
+        </ul>
+
+        <div id="define-function" class="fn-topics ">
+            <h2 class="class-header">Define Functions</h2>
+            <p>
+                To create a function declaration you use the function keyword followed
+                by the name of the function. Name of the function is user defined and choose
+                it carefully.
+            </p>
+            <p>
+                A function can have params or not and why because it's purely based on the needs
+            </p>
+            <h5 class="example-heading">Example One: A Function without params</h5>
+
+            <div class="fn-image">
+                <img src="../../../assets/images/js/js_function_one.PNG">
+            </div>
+            <h5 class="example-heading">Example Two: A function with params</h5>
+
+            <div class="fn-image">
+                <img src="../../../assets/images/js/js_function_two.PNG">
+            </div>
+
+            <code>
+                <span class="note">Note:</span> 
+                Do not write function exceeding more than 75 lines, if needed split the function
+                 into two. Because it's the best practice
+            </code>
+
+            <h5 class="example-heading pd-top15px">What is Parameters and Arguments</h5>
+            <p>
+                An <span class="note">Argument</span> is an variable which is passed to the function when it's invoked
+                and <span class="note">Parameter</span> is variable in the declaration of the function
+            </p>
+
+            <div class="fn-image">
+                <img src="../../../assets/images/js/js_function_three.PNG">
+            </div>
+        </div>
+        <div id="function-return-or-void" class="fn-topics">
+            <h2 class="class-header">Function return or Void</h2>
+            <p>
+                What do you mean by return or void. Basically in any programming languages, either a function can return
+                a value
+                or any to the function invoker or simply do some stuffs and not return anything (Void)
+            </p>
+
+            <h5 class="example-heading">Example Two: Void Example</h5>
+
+            <div class="fn-image">
+                <img src="../../../assets/images/js/js_function_two.PNG">
+            </div>
+            <h5 class="example-heading">Example Two: Return Example</h5>
+
+            <div class="fn-image">
+                <img src="../../../assets/images/js/js_function_four.PNG">
+            </div>
+            <code>
+                <span class="note">Note:</span> 
+                Inorder to return a value or any the function must have a return statement at the end of the function
+                followed by the value need to be returned
+            </code>
+        </div>
+        <div id="function-exp" class="fn-topics">
+            <h2 class="class-header">Function Experssion</h2>
+            <p>
+                Here, the function is created and assigned to the variable explicitly, like any other value.
+                No matter how the function is defined, it’s just a value stored in the variable
+            </p>
+
+            <h5 class="example-heading">Example</h5>
+            <div class="fn-image">
+                <img src="../../../assets/images/js/js_function_five.PNG">
+            </div>
+
+            <code>
+                <span class="note">Note:</span> 
+                In the line 112, you would noted that there is a semicolon, but why, because function Experssion
+                means assigning function to a variable so it means assignment that's why there is a semicolon.
+            </code>
+        </div>
+        <div id="function-exp-types" class="fn-topics">
+            <h2 class="class-header">Types of Function Experssion</h2>
+            <p>
+                There are 3 types of Function Expression
+            </p>
+
+            <ul>
+                <li> Named Function Expression </li>
+                <li> Anonymous Function Expression </li>
+                <li> IIFE (Immediately Invoked Function Expression or Self Invoking Function) </li>
+            </ul>
+        </div>
+        <div id="diff-btw-fn-and-fn-exp" class="fn-topics">
+            <h2 class="class-header">Diff btw function and Function Experssion</h2>
+            <p>
+                To create a function declaration you use the function keyword followed
+                by the name of the function.
+            </p>
+        </div>
+    </mat-card-content>
+</mat-card>

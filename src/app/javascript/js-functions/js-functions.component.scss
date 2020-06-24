@@ -1,0 +1,53 @@
+@import "~src/assets/styles/variables.scss";
+@import "~src/assets/styles/common.scss";
+
+.functions-card {
+
+    padding: 15px 50px;
+    margin-bottom: 10px;
+
+    .functions-card-content {
+        @extend .card-font-styles;
+
+        ul {
+            margin-top: 20px;
+
+            li {
+                margin-bottom: 10px;
+                color: $le-main-color;
+                
+                font-weight: $le-font-weight-500;
+                font-size: $le-font-size-15px;
+                a {
+                    cursor: pointer;
+                    text-decoration: none;
+                    color: $le-main-color;
+                    &:visited {
+                        color: $le-main-color;
+                    }
+                }
+
+                &:last-child {
+                    margin-bottom: 0px;
+                }
+            }
+        }
+
+        .fn-topics {
+            margin-bottom: 20px;
+
+            .fn-image {
+                @extend .display-flex-center;
+
+                img {
+                    width: 90%;
+                    padding: 15px 0;
+                }
+            }
+
+            &:last-child {
+                margin-bottom: 0;
+            }
+        }
+    }
+}

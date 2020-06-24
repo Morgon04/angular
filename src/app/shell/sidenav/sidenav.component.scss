@@ -1,5 +1,7 @@
+@import "~src/assets/styles/variables.scss";
+
 .sidenav-item-highlight-class {
-    color: #667256;
+    color: #53A3BD;
     position: relative;
     font-weight: 500;
 }
@@ -24,7 +26,7 @@
         &::before {
             content: '';
             position: absolute;
-            background-color: #566246;
+            background-color: $le-main-color;
             width: 3px;
             height: 99%;
             bottom: 0;

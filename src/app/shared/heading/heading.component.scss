@@ -1,0 +1,49 @@
+@import "~src/assets/styles/variables.scss";
+
+.heading {
+    display: flex;
+    flex-direction: row;
+    width: 90%;
+    margin: 0 auto;
+
+    .welcome-text {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 20px;
+        font-weight: bold;
+        margin-top: 10px;
+    }
+    .le-breadcrum {
+        display: flex;
+        list-style: none;
+        flex-wrap: wrap;
+        padding: .75rem 1rem;
+
+        .item+.item {
+
+            padding-left: .5rem;
+
+            &::before {
+                display: inline-block;
+                padding-right: .5rem;
+                color: #6c757d;
+                content: "/";
+            }
+        }
+
+        .item {
+            font-weight: 500;
+
+            a {
+                text-decoration: none;
+                color: #007bff;
+            }
+
+            &.active {
+                color: $le-main-color;
+            }
+        }
+    }
+
+}

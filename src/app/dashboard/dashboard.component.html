@@ -1,5 +1,22 @@
 <div class="container">
     <div class="text">
-        Welcome to my Page
+        Welcome to Learning
+    </div>
+
+    <div class="dashboard-header">
+        Course in Web Development
+    </div>
+    <div class="learning">
+        <div class="dashboard-card mat-elevation-z2" *ngFor="let course of dashboardData" [routerLink]="course.url">
+            <div class="dashboard-card-img">
+                <img [src]="course.imageUrl">
+            </div>
+            <div class="dashboard-card-content">
+                <h3 class="dashboard-card-content-header">{{ course.courseName }}</h3>
+                <p>
+                    {{ course.description }}
+                </p>
+            </div>
+        </div>
     </div>
 </div>

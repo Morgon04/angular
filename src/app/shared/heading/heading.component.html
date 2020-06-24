@@ -1,0 +1,17 @@
+<div class="heading">
+
+    <p class="welcome-text">
+        {{ headerText }}
+    </p>
+    <span class="spacer"></span>
+    <ol class="le-breadcrum">
+
+        <li class="item" *ngFor="let item of breadCrumList; let i = index"
+            [class.active]="i===breadCrumList.length-1">
+            <a [routerLink]="item.url" *ngIf="i!==breadCrumList.length-1">
+                {{ item.name }}
+            </a>
+            <span *ngIf="i===breadCrumList.length-1">{{ item.name }}</span>
+        </li>
+    </ol>
+</div>

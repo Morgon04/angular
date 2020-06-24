@@ -12,7 +12,7 @@ import { DashboardComponent } from './dashboard.component';
 
 const dashboardRoutes: Routes = [
   ShellService.child([
-    { path: '', component: DashboardComponent }
+    { path: '', component: DashboardComponent, data: { title: 'Dashboard' } }
   ])
 ];
 
