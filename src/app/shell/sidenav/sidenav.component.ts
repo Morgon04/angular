@@ -28,7 +28,8 @@ export class SidenavComponent implements OnInit {
   public initializeSideNavItems(): SideNav[] {
     return [
       { name: 'Angular (Ng)', url: '/angular' },
-      { name: 'Javascript (Js)', url: '/javascript' }
+      { name: 'Javascript (Js)', url: '/javascript' },
+      { name: 'To do', url: '/to-do' }
     ];
   }
 

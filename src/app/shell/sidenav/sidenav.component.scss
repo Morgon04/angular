@@ -2,8 +2,9 @@
 
 .sidenav-item-highlight-class {
     color: #53A3BD;
+    font-weight: bold;
     position: relative;
-    font-weight: 500;
+    background-color: #247ba01f;
 }
 
 .sidenav-spacer {
@@ -12,18 +13,13 @@
 
 .list-item {
 
-    margin-bottom: 10px;
-    height: 40px !important;
+    margin-bottom: 8px;
     text-decoration: none;
 
     &:hover {
         @extend .sidenav-item-highlight-class;
-    }
 
-    &.active {
-        @extend .sidenav-item-highlight-class;
-
-        &::before {
+        &::after {
             content: '';
             position: absolute;
             background-color: $le-main-color;
@@ -32,6 +28,21 @@
             bottom: 0;
             left: 0px;
         }
+    }
+
+    &.active {
+        @extend .sidenav-item-highlight-class;
+
+        &::after {
+            content: '';
+            position: absolute;
+            background-color: $le-main-color;
+            width: 3px;
+            height: 99%;
+            bottom: 0;
+            left: 0px;
+        }
+
     }
 
     &:last-child {

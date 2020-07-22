@@ -8,9 +8,11 @@ import { MatCardModule } from '@angular/material/card';
 // Routing Module Import
 import { JavascriptRoutingModule } from './javascript-routing.module';
 
+// Core Module Import
+import { CoreModule } from '../core/core.module';
+
 // Shared Module Import
 import { SharedModule } from './../shared/shared.module';
-import { CoreModule } from '../core/core.module';
 
 // Javascript Components Import
 import { LandingPageComponent } from './landing-page.component';

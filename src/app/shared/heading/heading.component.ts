@@ -15,7 +15,7 @@ import { BreadcrumService } from './../../core/_services/breadcrum.service';
 })
 export class HeadingComponent implements OnInit {
 
-  @Input() breadCrumList: any[] = [];
+  @Input() breadCrumList: any[] = []; // variable should specify the data types
   @Input() headerText: string;
 
   constructor(
@@ -25,13 +25,17 @@ export class HeadingComponent implements OnInit {
     router.events.pipe(filter(event => event instanceof NavigationEnd))
       .subscribe((val: any) => {
         this.getBreadCrumData(val.url);
-
       });
   }
 
   public ngOnInit(): void {
   }
 
+  /**
+   * @param url string
+   * should or should not have a param. if it's you should mention data type of the param
+   * should have or not have a return statment
+   */
   public getBreadCrumData(url: string): void {
     this.breadCrumList = this.breadCrum.getBreadCrums(url);
   }

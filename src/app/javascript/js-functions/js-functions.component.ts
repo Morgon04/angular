@@ -10,8 +10,8 @@ import { ViewportScroller } from '@angular/common';
 export class JsFunctionsComponent implements OnInit {
 
   public functionsTopicsList: any[] = [];
-
   public url: string;
+
   constructor(
     private viewportScroller: ViewportScroller,
     private router: Router

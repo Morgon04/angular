@@ -105,3 +105,10 @@
     font-weight: $le-font-weight-400;
     color: $le-main-color;
 }
+
+.mat-primary {
+    .mat-badge-content {
+        background-color: $le-main-color ;
+        color: white;
+    }
+}

@@ -1,0 +1,73 @@
+<section class="to-do-create">
+    <form [formGroup]="todoCreate" (ngSubmit)="saveTodo(todoForm)" #todoForm="ngForm">
+
+        <mat-card>
+            <mat-card-content>
+                <div class="to-do-create-content">
+                    <div class="to-do-create-content-items">
+                        <div class="to-do-create-item">
+                            <mat-form-field appearance="outline">
+                                <mat-label>To do Title</mat-label>
+                                <input matInput placeholder="Enter Title" formControlName="name">
+                                <mat-error *ngIf="todoCreate.get('name').errors">
+                                    <div *ngIf="todoCreate.get('name').errors?.required">
+                                        {{ 'Please Enter title' }}
+                                    </div>
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div class="to-do-create-item">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Priority</mat-label>
+                                <mat-select placeholder="Select Priority" formControlName="priority">
+                                    <mat-option value="High Priority">High Priority</mat-option>
+                                    <mat-option value="Medium Priority">Medium Priority</mat-option>
+                                    <mat-option value="Low Priority">Low Priority</mat-option>
+                                </mat-select>
+                                <mat-error *ngIf="todoCreate.get('priority').errors">
+                                    <div *ngIf="todoCreate.get('priority').errors">
+                                        {{ 'Please Select Priority' }}
+                                    </div>
+                                </mat-error>
+                            </mat-form-field>
+                        </div>
+                        <div class="to-do-create-item">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Display Order</mat-label>
+                                <input matInput placeholder="Enter Display order" formControlName="displayOrder">
+                            </mat-form-field>
+                        </div>
+                    </div>
+
+                    <div class="to-do-create-content-items">
+                        <div class="to-do-crate-date">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Date</mat-label>
+                                <input matInput [matDatepicker]="date" formControlName="todoDate" disabled>
+                                <mat-datepicker-toggle matSuffix [for]="date" touchUi="true"></mat-datepicker-toggle>
+                                <mat-datepicker #date></mat-datepicker>
+                            </mat-form-field>
+                        </div>
+
+                        <div class="to-do-crate-comment">
+                            <mat-form-field appearance="outline">
+                                <mat-label>Comments</mat-label>
+                                <textarea matInput minRows=1 formControlName="comment"></textarea>
+                            </mat-form-field>
+                        </div>
+                    </div>
+                </div>
+            </mat-card-content>
+            <mat-card-actions class="to-do-content-actions">
+                <div>
+                    <mat-checkbox formControlName="mutlipleTodos" color="primary">Another Todo</mat-checkbox>
+                </div>
+                <span class="spacer"></span>
+                <div class="to-do-content-action-btns">
+                    <button mat-button (click)="routeToList()">Cancel</button>
+                    <button mat-raised-button color="primary" type="submit">Create</button>
+                </div>
+            </mat-card-actions>
+        </mat-card>
+    </form>
+</section>

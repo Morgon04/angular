@@ -20,6 +20,10 @@ const appRoutes: Routes = [
     path: 'javascript',
     loadChildren: () => import('./javascript/javascript.module').then(m => m.JavascriptModule)
   },
+  {
+    path: 'to-do',
+    loadChildren: () => import('./to-do/to-do.module').then(m => m.ToDoModule)
+  },
   { path: '**', redirectTo: '/dashboard', pathMatch: 'full' },
 ];
 

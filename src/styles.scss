@@ -2,6 +2,7 @@
 
 @import "~src/assets/styles/variables.scss";
 @import "~src/assets/styles/common.scss";
+
 html,
 body {
     height: 100%;
@@ -24,4 +25,31 @@ body {
 
 .spacer {
     flex: 1 1 auto;
+}
+
+.mat-raised-button.mat-primary {
+    background-color: $le-main-color;
+}
+
+.mat-button.mat-primary {
+    color: $le-main-color;
+}
+
+.mat-raised-button {
+    .material-icons {
+        font-size: 20px;
+        vertical-align: text-bottom;
+    }
+}
+
+.mat-icon-button {
+    .material-icons {
+        color: $le-main-color;
+    }
+}
+
+.mat-checkbox-checked.mat-primary {
+    .mat-checkbox-background {
+        background-color: $le-main-color;
+    }
 }

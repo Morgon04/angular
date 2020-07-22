@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { BreadcrumService } from 'src/app/core/_services/breadcrum.service';
 
 @Component({
   selector: 'app-basics',
@@ -7,7 +8,9 @@ import { Component, OnInit } from '@angular/core';
 })
 export class BasicsComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private breadCrum: BreadcrumService
+  ) { }
 
   ngOnInit(): void {
   }

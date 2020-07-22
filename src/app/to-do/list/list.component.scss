@@ -1,0 +1,118 @@
+@import "~src/assets/styles/variables.scss";
+@import "~src/assets/styles/common.scss";
+
+
+.to-do-btn-list {
+    cursor: default;
+    margin-right: $le-15px;
+}
+
+.to-do {
+    width: 100%;
+    margin: 0 auto;
+    // padding-top: $le-20px;
+
+    .to-do-actions {
+        display: flex;
+        flex-direction: row;
+
+        .to-do-action {
+            margin-right: $le-15px;
+        }
+
+
+    }
+
+    .to-do-btns {
+        display: flex;
+    }
+
+    .to-do-table {
+        margin-top: $le-20px;
+        margin-bottom: $le-20px;
+
+        table {
+            width: 100%;
+            margin: 0 auto;
+
+           
+
+            .mat-progress-bar {
+                width: 85%;
+            }
+
+            .to-do-select {
+                flex: 0 0 50px;
+            }
+
+            .to-do-name {
+                flex: 0 0 250px;
+            }
+            .to-do-progress {
+                flex: 0 0 200px;
+            }
+
+            .to-do-priority {
+                flex: 0 0 170px;
+            }
+        }
+
+        .mat-icon-button {
+            .material-icons {
+                font-size: 22px;
+            }
+        }
+
+       
+    }
+}
+
+
+
+.badge {
+    min-width: 20px;
+    height: 20px;
+    color: #247ba0;
+    background-color: white;
+    border-radius: 50%;
+    line-height: 20px;
+    text-align: center;
+    margin-left: 10px;
+    font-size: 12px;
+}
+
+.priority {
+    width: 8px;
+    height: 8px;
+    margin-right: $le-10px;
+    border-radius: 50%;
+}
+
+.high {
+    background-color: #fa7a79;
+}
+
+.low {
+    background-color: #179df9;
+}
+
+.medium {
+    background-color: #fd9a39;
+}
+.mat-menu-item .mat-icon {
+    margin-right: 8px;
+}
+
+.to-do-progress-button{
+    border-radius: 20px;
+    background-color: transparent;
+    box-shadow: none;
+    color: #247ba0;
+    border: 1px solid #247ba0;
+    padding: 0 10px !important;
+    height: 34px !important;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 100px !important;
+}

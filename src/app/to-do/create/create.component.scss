@@ -1,0 +1,61 @@
+@import "~src/assets/styles/variables.scss";
+@import "~src/assets/styles/common.scss";
+
+.to-do-create {
+    .to-do-create-content {
+        width: 100%;
+        margin: 0 auto;
+        padding: $le-16px;
+
+        .to-do-create-content-items {
+            display: flex;
+            flex-direction: row;
+            width: 100%;
+            margin: 0 auto;
+
+            &:last-child {
+                padding-top: $le-10px;
+            }
+
+            .to-do-create-item {
+                margin-right: $le-10px;
+                width: 30%;
+
+                .mat-form-field {
+                    width: 100%;
+                }
+
+                &:last-child {
+                    margin-right: 0;
+                }
+            }
+
+            .to-do-crate-date {
+                margin-right: $le-10px;
+                width: 30%;
+
+                .mat-form-field {
+                    width: 100%;
+                }
+            }
+
+            .to-do-crate-comment {
+                margin-right: $le-10px;
+                width: 70%;
+
+                .mat-form-field {
+                    width: 100%;
+                }
+            }
+        }
+
+    }
+
+    .to-do-content-actions {
+        display: flex;
+        flex-direction: row;
+        padding: 0 16px;
+        // .to-do-content-action-btns {}
+
+    }
+}
