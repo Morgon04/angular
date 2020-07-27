@@ -24,6 +24,10 @@ const appRoutes: Routes = [
     path: 'to-do',
     loadChildren: () => import('./to-do/to-do.module').then(m => m.ToDoModule)
   },
+  {
+    path: 'responsive',
+    loadChildren: () => import('./reponsive/reponsive.module').then(m => m.ReponsiveModule)
+  },
   { path: '**', redirectTo: '/dashboard', pathMatch: 'full' },
 ];
 

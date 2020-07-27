@@ -1,6 +1,10 @@
+// Angular Import
 import { Component, OnInit } from '@angular/core';
 import { Router, ActivatedRoute, NavigationEnd } from '@angular/router';
 import { Title } from '@angular/platform-browser';
+
+// Core Service Import
+import { CoreService } from 'src/app/core/core.service';
 
 // Rxjs Import
 import { filter, map, mergeMap } from 'rxjs/operators';
@@ -16,6 +20,7 @@ export class AppComponent implements OnInit {
     private router: Router,
     private activatedRoute: ActivatedRoute,
     private titleService: Title,
+    private coreService: CoreService
   ) { }
   ngOnInit() {
 

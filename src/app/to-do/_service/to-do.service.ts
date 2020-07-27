@@ -67,4 +67,14 @@ export class ToDoService {
         catchError(this.coreService.errorHandler)
       );
   }
+
+  public deleteTodos(ids: any[]): Observable<any[]> {
+    return this.httpClient.delete(`/to-do/delete-by-ids?id=${JSON.stringify(ids)}`)
+      .pipe(
+        map((response: any) => {
+          return response;
+        }),
+        catchError(this.coreService.errorHandler)
+      );
+  }
 }

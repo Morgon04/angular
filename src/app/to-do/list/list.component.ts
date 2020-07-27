@@ -48,7 +48,7 @@ export class ListComponent implements OnInit {
     this.todoService.getTodoList().subscribe(
       ((response: any) => {
         this.dataSource = response && response.responseContent ? response.responseContent : [];
-        this.table.renderRows();
+        // this.table.renderRows();
       })
     );
   }
@@ -107,7 +107,16 @@ export class ListComponent implements OnInit {
   }
 
   public renderTableRows(): void {
-    this.table.renderRows();
+    // this.table.renderRows();
+  }
+
+  public getElementNxtStatus(status: string): string {
+    if (status === 'Start') {
+      return 'In Progress';
+    } else if (status === 'In Progress') {
+      return 'Complete';
+    }
+    return '';
   }
 
 
@@ -122,7 +131,7 @@ export class ListComponent implements OnInit {
       .subscribe(
         (({ responseContent, message, code }: any) => {
           if (code === 200) {
-            this.openSnackBar(message);
+            // this.openSnackBar(message);
           }
           this.updaeTodoTable(ele, responseContent);
           this.renderTableRows();
@@ -162,7 +171,7 @@ export class ListComponent implements OnInit {
       .subscribe(
         (({ message, code }: any) => {
           if (code === 200) {
-            this.openSnackBar(message);
+            // this.openSnackBar(message);
           }
           const idx = this.findTodoIndex(ele._id);
           if (idx >= 0) {
@@ -173,11 +182,33 @@ export class ListComponent implements OnInit {
       );
   }
 
+  // delete to do
+  public deleteTodos(): void {
+    const selectedIds = this.selection.selected.map((s) => s._id);
+    this.todoService.deleteTodos(selectedIds)
+      .subscribe(
+        (({ message, code }: any) => {
+          if (code === 200) {
+            // this.openSnackBar(message);
+            this.selection.clear();
+          }
+          selectedIds.forEach((s) => {
+            const idx = this.findTodoIndex(s);
+            if (idx >= 0) {
+              this.dataSource.splice(idx, 1);
+            }
+          });
+          this.renderTableRows();
+        })
+      );
+  }
+
   public openSnackBar(message: string) {
     this.snackBar.openFromComponent(SnackBarComponent, {
       data: { message },
       duration: 3000
     });
   }
+
 
 }

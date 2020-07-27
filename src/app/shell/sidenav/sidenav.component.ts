@@ -29,7 +29,8 @@ export class SidenavComponent implements OnInit {
     return [
       { name: 'Angular (Ng)', url: '/angular' },
       { name: 'Javascript (Js)', url: '/javascript' },
-      { name: 'To do', url: '/to-do' }
+      { name: 'To do', url: '/to-do' },
+      { name: 'Responsive', url: '/responsive' }
     ];
   }
 

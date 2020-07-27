@@ -38,11 +38,27 @@ export class BreadcrumService {
               name: 'Create', url: '/to-do/create',
             }
           ],
+        },
+        {
+          name: 'Responsive Design', url: '/responsive',
+          children: [
+            {
+              name: 'Candidates',
+              url: '/responsive/candidates',
+            }
+          ],
         }
 
 
       ]
     }
+  ];
+
+  public containArray = [
+    '/responsive/list',
+    '/javascript/topics',
+    '/angular/topics',
+    '/to-do/list'
   ];
   constructor() { }
 
@@ -60,7 +76,7 @@ export class BreadcrumService {
       return [{ name: parent.name, url: parent.url }, { name: child.name, url: child.url }];
     } else if (url && spiltedUrl && spiltedUrl.length === 3) {
       child = this.findBreadCrumChild(parent.children, `/${spiltedUrl[1]}`);
-      if (['/javascript/topics', '/angular/topics', '/to-do/list'].includes(url)) {
+      if (this.containArray.includes(url)) {
         return [{ name: parent.name, url: parent.url }, { name: child.name, url: child.url }];
       }
       grandChild = this.findBreadCrumChild(child.children, url);

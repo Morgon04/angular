@@ -3,6 +3,7 @@ import { HttpErrorResponse } from '@angular/common/http';
 
 // RxJs Import
 import { throwError } from 'rxjs/internal/observable/throwError';
+import { BehaviorSubject } from 'rxjs/internal/BehaviorSubject';
 
 @Injectable({
   providedIn: 'root'
@@ -15,6 +16,8 @@ export class ErrorResponse {
 
 export class CoreService {
 
+  public loaderboolean = new BehaviorSubject<boolean>(false);
+  public loaderAsObservable = this.loaderboolean.asObservable();
   constructor() { }
 
   public errorHandler(errorResponse: HttpErrorResponse) {
@@ -30,5 +33,9 @@ export class CoreService {
       }
     }
     return throwError(errorMsg);
+  }
+
+  public setLoader(value: boolean): void {
+    this.loaderboolean.next(value);
   }
 }

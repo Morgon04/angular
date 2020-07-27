@@ -9,7 +9,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // Module Import
 import { ShellModule } from './shell/shell.module';
 import { CoreModule } from './core/core.module';
-
+import { SharedModule } from './shared/shared.module';
 // App Component Import
 import { AppComponent } from './app.component';
 
@@ -31,6 +31,9 @@ import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 
     // Shell Module
     ShellModule,
+
+    // Shared Module
+    SharedModule,
 
     AppRoutingModule // to be last in the import
   ],

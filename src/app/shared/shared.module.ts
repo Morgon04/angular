@@ -4,6 +4,7 @@ import { CommonModule } from '@angular/common';
 
 // Angular Material Import
 import { MatSnackBarModule } from '@angular/material/snack-bar';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 // Component Import
 import { TopicsComponent } from './topics/topics.component';
