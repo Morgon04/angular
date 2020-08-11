@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-responsive-topics',
@@ -8,7 +9,10 @@ import { Component, OnInit } from '@angular/core';
 export class ResponsiveTopicsComponent implements OnInit {
 
   public responsiveTopicsList: { name: string, url: string }[] = [];
-  constructor() { }
+
+  constructor(
+    private router: Router
+  ) { }
 
   public ngOnInit(): void {
 
@@ -19,25 +23,29 @@ export class ResponsiveTopicsComponent implements OnInit {
       },
       {
         name: 'Dashboard',
-        url: '/responsive/candidates'
+        url: ''
       },
       {
         name: 'Angular Table',
-        url: '/responsive/candidates'
+        url: ''
       },
       {
         name: 'Angular Datepicker',
-        url: '/responsive/candidates'
+        url: ''
       },
       {
         name: 'Candidates List',
-        url: '/responsive/candidates'
+        url: ''
       },
       {
         name: 'Candidates List',
-        url: '/responsive/candidates'
+        url: ''
       }
     ];
+  }
+
+  public navigateToPage(url: string) {
+    this.router.navigateByUrl(url);
   }
 
 }

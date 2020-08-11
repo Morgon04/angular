@@ -18,6 +18,12 @@ export class CoreService {
 
   public loaderboolean = new BehaviorSubject<boolean>(false);
   public loaderAsObservable = this.loaderboolean.asObservable();
+
+
+  // Sidenav Open and close Observable
+  public sidenavOpenOrClose = new BehaviorSubject<boolean>(false);
+  public sidenavOpenOrCloseObservable = this.sidenavOpenOrClose.asObservable();
+
   constructor() { }
 
   public errorHandler(errorResponse: HttpErrorResponse) {
@@ -37,5 +43,9 @@ export class CoreService {
 
   public setLoader(value: boolean): void {
     this.loaderboolean.next(value);
+  }
+
+  public setSidenavState(value: boolean): void {
+    this.sidenavOpenOrClose.next(value);
   }
 }

@@ -1,0 +1,275 @@
+<div class="candidate-container">
+
+    <div class="candidate mat-elevation-z4" [class.cand-w-inc]="sidenavState">
+        <div class="candidate-icon">
+            <mat-icon>
+                <span class="material-icons">
+                    mail
+                </span>
+            </mat-icon>
+            <mat-icon>
+                <span class="material-icons">
+                    redo
+                </span>
+            </mat-icon>
+        </div>
+        <p class="candidate-image">
+            <img
+                src="data:image/jpeg;base64,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">
+        </p>
+        <div class="candidate-details">
+            <p>Murugan Sakthivel</p>
+            <h4>Senior Software Engg..</h4>
+        </div>
+
+        <div class="candidate-other">
+            <p>Imported from Github</p>
+            <h4>by Morgon Sakthivel</h4>
+        </div>
+    </div>
+    <div class="candidate mat-elevation-z4" [class.cand-w-inc]="sidenavState">
+        <div class="candidate-icon">
+            <mat-icon>
+                <span class="material-icons">
+                    mail
+                </span>
+            </mat-icon>
+            <mat-icon>
+                <span class="material-icons">
+                    redo
+                </span>
+            </mat-icon>
+        </div>
+        <p class="candidate-image">
+            <img
+                src="data:image/jpeg;base64,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">
+        </p>
+
+        <div class="candidate-details">
+            <p>Peter Heyes</p>
+            <h4>Future Oppurnity</h4>
+        </div>
+
+        <div class="candidate-other">
+            <p>Imported from Github</p>
+            <h4>by Ronald Guzman</h4>
+        </div>
+    </div>
+    <div class="candidate mat-elevation-z4" [class.cand-w-inc]="sidenavState">
+        <div class="candidate-icon">
+            <mat-icon>
+                <span class="material-icons">
+                    mail
+                </span>
+            </mat-icon>
+            <mat-icon>
+                <span class="material-icons">
+                    redo
+                </span>
+            </mat-icon>
+        </div>
+        <p class="candidate-image">
+            <img
+                src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcTMio5UHQKuvdPkvHD4wLt8lJbf6f4JQCUUQA&usqp=CAU">
+        </p>
+        <div class="candidate-details">
+            <p>Sachin Tendukular</p>
+            <h4>God of Cricket</h4>
+        </div>
+
+        <div class="candidate-other">
+            <p>Imported from Github</p>
+            <h4>by Cricket Lengends</h4>
+        </div>
+    </div>
+    <div class="candidate mat-elevation-z4" [class.cand-w-inc]="sidenavState">
+        <div class="candidate-icon">
+            <mat-icon>
+                <span class="material-icons">
+                    mail
+                </span>
+            </mat-icon>
+            <mat-icon>
+                <span class="material-icons">
+                    redo
+                </span>
+            </mat-icon>
+        </div>
+        <p class="candidate-image">
+            <img
+                src="https://images.unsplash.com/photo-1532074205216-d0e1f4b87368?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&w=1000&q=80">
+        </p>
+        <div class="candidate-details">
+            <p>Jessica Lawerence</p>
+            <h4>In Discussion</h4>
+        </div>
+
+        <div class="candidate-other">
+            <p>Imported from Github</p>
+            <h4>by Jennifer Lopez</h4>
+        </div>
+    </div>
+    <div class="candidate mat-elevation-z4" [class.cand-w-inc]="sidenavState">
+        <div class="candidate-icon">
+            <mat-icon>
+                <span class="material-icons">
+                    mail
+                </span>
+            </mat-icon>
+            <mat-icon>
+                <span class="material-icons">
+                    redo
+                </span>
+            </mat-icon>
+        </div>
+        <p class="candidate-image">
+            <img src="https://images.statusfacebook.com/profile_pictures/Beautiful/Beautiful_Profile_Picture04.jpg">
+        </p>
+        <div class="candidate-details">
+            <p>Lin Dan</p>
+            <h4>Legendary Badminton</h4>
+        </div>
+
+        <div class="candidate-other">
+            <p>Imported from Github</p>
+            <h4>by Chinese</h4>
+        </div>
+    </div>
+
+</div>
+
+<!-- <div fxLayout="row wrap" fxLayout.xs="column" fxFlex="100" fxLayoutGap="20px">
+    <div class="mat-elevation-z4" fxFlex="23.55">
+        <div class="candidate-icon">
+            <mat-icon>
+                <span class="material-icons">
+                    mail
+                </span>
+            </mat-icon>
+            <mat-icon>
+                <span class="material-icons">
+                    redo
+                </span>
+            </mat-icon>
+        </div>
+        <p class="candidate-image">
+            <img src="https://images.statusfacebook.com/profile_pictures/Beautiful/Beautiful_Profile_Picture04.jpg">
+        </p>
+        <div class="candidate-details">
+            <p>Lin Dan</p>
+            <h4>Legendary Badminton</h4>
+        </div>
+
+        <div class="candidate-other">
+            <p>Imported from Github</p>
+            <h4>by Chinese</h4>
+        </div>
+    </div>
+    <div class="mat-elevation-z4" fxFlex="23.55">
+        <div class="candidate-icon">
+            <mat-icon>
+                <span class="material-icons">
+                    mail
+                </span>
+            </mat-icon>
+            <mat-icon>
+                <span class="material-icons">
+                    redo
+                </span>
+            </mat-icon>
+        </div>
+        <p class="candidate-image">
+            <img src="https://images.statusfacebook.com/profile_pictures/Beautiful/Beautiful_Profile_Picture04.jpg">
+        </p>
+        <div class="candidate-details">
+            <p>Lin Dan</p>
+            <h4>Legendary Badminton</h4>
+        </div>
+
+        <div class="candidate-other">
+            <p>Imported from Github</p>
+            <h4>by Chinese</h4>
+        </div>
+    </div>
+
+    <div class="mat-elevation-z4" fxFlex="23.55">
+        <div class="candidate-icon">
+            <mat-icon>
+                <span class="material-icons">
+                    mail
+                </span>
+            </mat-icon>
+            <mat-icon>
+                <span class="material-icons">
+                    redo
+                </span>
+            </mat-icon>
+        </div>
+        <p class="candidate-image">
+            <img src="https://images.statusfacebook.com/profile_pictures/Beautiful/Beautiful_Profile_Picture04.jpg">
+        </p>
+        <div class="candidate-details">
+            <p>Lin Dan</p>
+            <h4>Legendary Badminton</h4>
+        </div>
+
+        <div class="candidate-other">
+            <p>Imported from Github</p>
+            <h4>by Chinese</h4>
+        </div>
+    </div>
+
+    <div class="mat-elevation-z4" fxFlex="23.55">
+        <div class="candidate-icon">
+            <mat-icon>
+                <span class="material-icons">
+                    mail
+                </span>
+            </mat-icon>
+            <mat-icon>
+                <span class="material-icons">
+                    redo
+                </span>
+            </mat-icon>
+        </div>
+        <p class="candidate-image">
+            <img src="https://images.statusfacebook.com/profile_pictures/Beautiful/Beautiful_Profile_Picture04.jpg">
+        </p>
+        <div class="candidate-details">
+            <p>Lin Dan</p>
+            <h4>Legendary Badminton</h4>
+        </div>
+
+        <div class="candidate-other">
+            <p>Imported from Github</p>
+            <h4>by Chinese</h4>
+        </div>
+    </div>
+
+    <div class="mat-elevation-z4" fxFlex="23.55">
+        <div class="candidate-icon">
+            <mat-icon>
+                <span class="material-icons">
+                    mail
+                </span>
+            </mat-icon>
+            <mat-icon>
+                <span class="material-icons">
+                    redo
+                </span>
+            </mat-icon>
+        </div>
+        <p class="candidate-image">
+            <img src="https://images.statusfacebook.com/profile_pictures/Beautiful/Beautiful_Profile_Picture04.jpg">
+        </p>
+        <div class="candidate-details">
+            <p>Lin Dan</p>
+            <h4>Legendary Badminton</h4>
+        </div>
+
+        <div class="candidate-other">
+            <p>Imported from Github</p>
+            <h4>by Chinese</h4>
+        </div>
+    </div>
+</div> -->

@@ -1,0 +1,142 @@
+.candidate-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    width: 100%
+}
+
+.candidate {
+    .candidate-icon {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 4px;
+        color: #969595;
+        // padding: 18px 18px 0;
+    }
+
+    display: flex;
+    flex-direction: column;
+    padding: 18px;
+    margin-bottom: 16px;
+    background-color: white;
+    border-radius: 4px;
+    margin-right: 0;
+    box-sizing: border-box;
+
+    .candidate-image {
+        // padding: 0 18px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin-bottom: 0;
+
+        img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+        }
+    }
+}
+
+.candidate-details {
+    // padding: 0 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+
+    p {
+        font-size: 16px;
+        color: #333333;
+        // color: darkgray;
+        font-weight: 500;
+        margin-bottom: 4px;
+    }
+
+    h4 {
+        color: #00acc1;
+    }
+}
+
+.candidate-other {
+    // padding: 0 18px 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    p {
+        font-size: 14px;
+        color: darkgray;
+        margin-bottom: 4px;
+    }
+
+    h4 {
+        font-size: 14px;
+        color: darkgray;
+        margin-bottom: 0;
+    }
+}
+
+@media (min-width:640px) {
+    .candidate-container {
+        flex-direction: row;
+    }
+
+    .candidate {
+        flex-direction: column;
+        display: flex;
+        width: 30.65%;
+        margin-right: 8px;
+        margin-left: 8px;
+    }
+}
+
+@media (min-width:720px) {
+    .candidate {
+        width: 31.46%;
+    }
+}
+
+
+
+@media (min-width: 1024px) {
+    .candidate {
+        width: 30.88%;
+        margin-left: 9px;
+        margin-right: 9px;
+    }
+
+    .cand-w-inc {
+        width: 23.15%;
+    }
+}
+
+@media (max-width:1024px) {
+    .no-margin-right {
+        margin-right: 0;
+    }
+}
+
+@media (min-width:1280px) {
+
+    .candidate {
+        width: 23.27%;
+    }
+
+    .cand-w-inc {
+        width: 18.59%
+    }
+}
+
+@media (min-width:1600px) {
+    .candidate {
+        width: 23.596%;
+    }
+
+    .cand-w-inc {
+        width: 18.8%;
+    }
+}

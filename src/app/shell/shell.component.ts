@@ -1,7 +1,10 @@
-import { Component, OnInit, OnDestroy, AfterViewInit, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, OnDestroy, AfterViewInit, ChangeDetectorRef, OnChanges } from '@angular/core';
 
 // Angular Material Media Import
 import { MediaMatcher } from '@angular/cdk/layout';
+
+// Core Service Import
+import { CoreService } from 'src/app/core/core.service';
 
 @Component({
   selector: 'app-shell',
@@ -24,9 +27,10 @@ export class ShellComponent implements OnInit, OnDestroy, AfterViewInit {
   constructor(
     private changeDetectorRef: ChangeDetectorRef,
     private media: MediaMatcher,
+    private coreService: CoreService
   ) {
 
-    this.mobileQuery = this.media.matchMedia('(max-width: 1000px)');
+    this.mobileQuery = this.media.matchMedia('(max-width: 1023px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     // tslint:disable-next-line: deprecation
     this.mobileQuery.addListener(this._mobileQueryListener);
@@ -49,6 +53,10 @@ export class ShellComponent implements OnInit, OnDestroy, AfterViewInit {
 
   public settingHeaderText(event: string) {
     this.headerText = `Learning - ${event}`;
+  }
+
+  public sideNavChange(event: boolean) {
+    this.coreService.setSidenavState(!event);
   }
 
 }

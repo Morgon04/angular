@@ -16,6 +16,9 @@ import { AppComponent } from './app.component';
 // Angular Material Field Import
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 
+// Flex Layout Import
+// import { FlexLayoutModule } from '@angular/flex-layout';
+
 @NgModule({
   declarations: [
     AppComponent
@@ -34,6 +37,8 @@ import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
 
     // Shared Module
     SharedModule,
+
+    // FlexLayoutModule,
 
     AppRoutingModule // to be last in the import
   ],
