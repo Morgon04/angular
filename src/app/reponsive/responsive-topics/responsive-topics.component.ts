@@ -22,12 +22,12 @@ export class ResponsiveTopicsComponent implements OnInit {
         url: '/responsive/candidates'
       },
       {
-        name: 'Dashboard',
-        url: ''
+        name: 'Developers',
+        url: '/responsive/developers'
       },
       {
-        name: 'Angular Table',
-        url: ''
+        name: 'Team Design',
+        url: '/responsive/teams'
       },
       {
         name: 'Angular Datepicker',

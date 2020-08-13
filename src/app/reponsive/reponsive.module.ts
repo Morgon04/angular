@@ -18,13 +18,17 @@ import { FlexLayoutModule } from '@angular/flex-layout';
 import { ListComponent } from './list/list.component';
 import { ResponsiveTopicsComponent } from './responsive-topics/responsive-topics.component';
 import { CandidateListComponent } from './candidate-list/candidate-list.component';
+import { DevelopersComponent } from './developers/developers.component';
+import { DesignComponent } from './design/design.component';
 
 
 @NgModule({
   declarations: [
     ListComponent,
     ResponsiveTopicsComponent,
-    CandidateListComponent
+    CandidateListComponent,
+    DevelopersComponent,
+    DesignComponent
   ],
   imports: [
     CommonModule,

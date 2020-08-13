@@ -21,7 +21,6 @@ export class CandidateListComponent implements OnInit {
     this.coreService.sidenavOpenOrCloseObservable
       .subscribe(
         (response) => {
-          console.log(response);
           this.sidenavState = response;
         }
       );

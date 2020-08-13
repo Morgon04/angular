@@ -1,0 +1,24 @@
+<div class="developers-list">
+    <div class="developer mat-elevation-z4" *ngFor="let cand of developersList" [class.deve-w-inc]="sidenavState">
+        <div class="developer-image">
+            <img src="{{cand.image}}">
+        </div>
+
+        <div class="developer-details">
+            <p class="developer-name"> {{ cand.name }} </p>
+            <h3 class="developer-name"> {{ cand.designation }} </h3>
+            <div class="developer-rate">
+                Hourly Rate <span class="rate">{{ cand.rate }}</span>
+            </div>
+        </div>
+
+        <div class="developer-reviews">
+            <div>
+                Total Reviews<span class="reviews">{{ cand.totalReviews }}</span>
+            </div>
+            <div>
+                Review<span class="reviews">{{ cand.reviews}}</span>
+            </div>
+        </div>
+    </div>
+</div>
