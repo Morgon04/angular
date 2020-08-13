@@ -1,1 +1,42 @@
-<p>design works!</p>
+<div class="team-list">
+    <div *ngFor="let team of teamList" class="teams" [class.team-w-inc]="sidenavState">
+        <div class="team mat-elevation-z2">
+
+            <div class="team-icon">
+                <mat-icon>
+                    <span class="material-icons green">
+                        check_circle
+                    </span>
+                </mat-icon>
+                <mat-icon>
+                    <span class="material-icons">
+                        more_horiz
+                    </span>
+                </mat-icon>
+            </div>
+            <div class="team-image">
+                <img src="{{team.image}}">
+            </div>
+
+            <div class="team-details">
+                <p class="team-name"> {{ team.name }} </p>
+                <h3 class="team-designation"> {{ team.designation }} </h3>
+            </div>
+
+            <div class="team-tasks">
+                <p>
+                    <span class="tasks">{{ team.totalTasks }} Tasks</span>
+                </p>
+                <p class="spinner">
+                    <mat-progress-spinner color="#54957f" [diameter]="spinnerDiameter"
+                        [value]="team.completedPercentage">
+                    </mat-progress-spinner><span class="completed">{{ team.completedPercentage + '%' }}</span>
+                </p>
+            </div>
+
+            <div class="team-action">
+                <button>View Profile</button>
+            </div>
+        </div>
+    </div>
+</div>

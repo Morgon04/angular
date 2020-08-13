@@ -7,6 +7,8 @@ import { ReponsiveRoutingModule } from './reponsive-routing.module';
 
 // Angular Material Import
 import { MatIconModule } from '@angular/material/icon';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+
 
 // Shared Module Import
 import { SharedModule } from '../shared/shared.module';
@@ -33,7 +35,9 @@ import { DesignComponent } from './design/design.component';
   imports: [
     CommonModule,
 
+    // Angular Material
     MatIconModule,
+    MatProgressSpinnerModule,
 
     // Shared Module
     SharedModule,

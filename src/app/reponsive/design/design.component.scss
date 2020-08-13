@@ -1,0 +1,141 @@
+@import "~src/assets/styles/variables.scss";
+@import "~src/assets/styles/common.scss";
+
+
+.team-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    .teams {
+        padding: 0 10px;
+        box-sizing: border-box;
+        margin-bottom: $le-16px;
+        width: 100%;
+
+        .team {
+            background-color: white;
+            padding: $le-16px;
+            border-radius: $le-8px;
+
+            .team-icon {
+                display: flex;
+                justify-content: space-between;
+                margin-bottom: $le-10px;
+
+                .material-icons {
+                    font-size: 22px;
+                }
+
+                .green {
+                    color: #06ab73;
+                }
+            }
+
+            .team-image {
+                display: flex;
+                justify-content: center;
+                margin-bottom: $le-12px;
+
+                img {
+                    width: 80px;
+                    height: 80px;
+                    border-radius: 50%;
+                }
+            }
+
+            .team-details {
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+
+                .team-name {
+                    color: #3e454b;
+                    margin-bottom: $le-4px;
+                    font-size: $le-font-size-18px;
+                    font-weight: $le-font-weight-500;
+                }
+
+                .team-designation {
+                    color: #c1c3c2;
+                    font-size: $le-font-size-14px;
+                    font-weight: $le-font-weight-500;
+                    margin-bottom: 0;
+                }
+            }
+
+            .team-tasks {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                padding: $le-16px 0;
+
+                p {
+                    margin-bottom: 0;
+                }
+
+                .tasks {
+                    font-size: $le-font-size-12px;
+                    font-weight: $le-font-weight-500;
+                    color: #bdbfbe;
+                }
+
+                .spinner {
+                    display: flex;
+
+                    .completed {
+                        margin-top: 2px;
+                        margin-left: 6px;
+                    }
+                }
+            }
+
+            .team-action {
+                button {
+                    width: 100%;
+                    background-color: white;
+                    border: 1px solid rgba($color: #000000, $alpha: 0.5);
+                    padding: $le-16px;
+                    text-align: center;
+                    outline: none;
+                    border-radius: $le-4px;
+                    cursor: pointer;
+                    font-size: $le-font-size-14px;
+                    font-weight: $le-font-weight-500;
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 640px) {
+    .team-list {
+        .teams {
+            width: 50%;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .team-list {
+        .teams {
+            width: 33%;
+        }
+
+        .team-w-inc {
+            width: 25%;
+        }
+    }
+}
+
+@media (min-width:1280px) {
+    .team-list {
+        .teams {
+            width: 25%;
+        }
+
+        .team-w-inc {
+            width: 20%;
+        }
+    }
+}
