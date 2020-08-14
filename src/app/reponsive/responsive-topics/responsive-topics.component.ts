@@ -30,8 +30,8 @@ export class ResponsiveTopicsComponent implements OnInit {
         url: '/responsive/teams'
       },
       {
-        name: 'Angular Datepicker',
-        url: ''
+        name: 'GOT CASTS',
+        url: '/responsive/got'
       },
       {
         name: 'Candidates List',

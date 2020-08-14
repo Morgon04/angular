@@ -53,6 +53,10 @@ export class BreadcrumService {
             {
               name: 'Teams',
               url: '/responsive/teams',
+            },
+            {
+              name: 'GOT',
+              url: '/responsive/got',
             }
           ],
         }

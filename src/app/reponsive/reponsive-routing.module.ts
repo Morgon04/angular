@@ -11,6 +11,7 @@ import { ResponsiveTopicsComponent } from './responsive-topics/responsive-topics
 import { CandidateListComponent } from './candidate-list/candidate-list.component';
 import { DevelopersComponent } from './developers/developers.component';
 import { DesignComponent } from './design/design.component';
+import { GotCastsComponent } from './got-casts/got-casts.component';
 
 const responsiveRoutes: Routes = [
   ShellService.child(
@@ -43,7 +44,12 @@ const responsiveRoutes: Routes = [
           {
             path: 'teams',
             component: DesignComponent,
-            data: { title: 'Responsive Developers' },
+            data: { title: 'Responsive Teams' },
+          },
+          {
+            path: 'got',
+            component: GotCastsComponent,
+            data: { title: 'GOT CASTS' },
           }
         ]
       }

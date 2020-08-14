@@ -1,0 +1,127 @@
+@import "~src/assets/styles/variables.scss";
+@import "~src/assets/styles/common.scss";
+
+.got-casts-list {
+    display: flex;
+    flex-wrap: wrap;
+
+    .got-casts {
+        padding: 0 10px;
+        box-sizing: border-box;
+        margin-bottom: $le-16px;
+        width: 100%;
+
+        .got-cast {
+            background-color: white;
+
+            .got-cast-image {
+                width: 100%;
+                position: relative;
+
+                .got-cast-name {
+                    position: absolute;
+                    right: 0;
+                    bottom: 0;
+                    font-size: $le-font-size-18px;
+                    font-weight: $le-font-weight-500;
+                    padding: $le-12px;
+                    color: white;
+                }
+
+                img {
+                    width: 100%;
+                    height: 170px;
+                }
+            }
+
+            .got-cast-details {
+                display: flex;
+                flex-direction: column;
+                padding: 0 $le-20px;
+
+                .got-cast-profile {
+                    margin-top: -40px;
+                    z-index: 10;
+
+
+                    img {
+                        padding: 3px;
+                        border: 1px solid #e0e0e0;
+                        background-color: #e5e9ec;
+                        width: 100px;
+                        height: 100px;
+                        border-radius: 50%;
+                    }
+                }
+
+                .got-cast-personal {
+                    h3 {
+
+                        font-weight: $le-font-weight-500;
+                        margin-bottom: 0;
+                    }
+
+                    p {
+                        font-size: $le-font-size-12px;
+                        color: #9e9e9e !important;
+                    }
+
+                    .got-cast-description {
+                        color: #757575;
+                        font-size: $le-font-size-14px;
+                        // text-align: justify;
+                    }
+                }
+            }
+        }
+
+    }
+}
+
+@media (min-width: 640px) {
+    .got-casts-list {
+        .got-casts {
+            width: 50%;
+
+            .got-cast {
+                min-height: 425px;
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .got-casts-list {
+        .got-casts {
+            width: 33%;
+
+            .got-cast {
+                min-height: 410px;
+            }
+        }
+    }
+}
+
+@media (min-width:1280px) {
+    .got-casts-list {
+
+
+        .cast-w-inc {
+            width: 25%;
+        }
+    }
+}
+
+@media (min-width:1600px) {
+    .got-casts-list {
+        .got-casts {
+            width: 25%;
+
+
+        }
+
+        // .cast-w-inc {
+        //     width: 25%;
+        // }
+    }
+}

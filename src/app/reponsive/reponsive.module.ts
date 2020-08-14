@@ -22,6 +22,7 @@ import { ResponsiveTopicsComponent } from './responsive-topics/responsive-topics
 import { CandidateListComponent } from './candidate-list/candidate-list.component';
 import { DevelopersComponent } from './developers/developers.component';
 import { DesignComponent } from './design/design.component';
+import { GotCastsComponent } from './got-casts/got-casts.component';
 
 
 @NgModule({
@@ -30,7 +31,8 @@ import { DesignComponent } from './design/design.component';
     ResponsiveTopicsComponent,
     CandidateListComponent,
     DevelopersComponent,
-    DesignComponent
+    DesignComponent,
+    GotCastsComponent
   ],
   imports: [
     CommonModule,
