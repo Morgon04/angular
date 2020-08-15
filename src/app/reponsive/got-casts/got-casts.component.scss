@@ -59,6 +59,7 @@
 
                         font-weight: $le-font-weight-500;
                         margin-bottom: 0;
+                        font-size: $le-font-size-20px;
                     }
 
                     p {
@@ -69,6 +70,7 @@
                     .got-cast-description {
                         color: #757575;
                         font-size: $le-font-size-14px;
+                        margin-bottom: 0;
                         // text-align: justify;
                     }
                 }
@@ -78,13 +80,21 @@
     }
 }
 
+
+
 @media (min-width: 640px) {
     .got-casts-list {
         .got-casts {
             width: 50%;
 
             .got-cast {
-                min-height: 425px;
+                min-height: 410px;
+
+                .got-cast-image {
+                    .got-cast-name {
+                        font-size: $le-font-size-20px;
+                    }
+                }
             }
         }
     }
@@ -116,12 +126,6 @@
     .got-casts-list {
         .got-casts {
             width: 25%;
-
-
         }
-
-        // .cast-w-inc {
-        //     width: 25%;
-        // }
     }
 }

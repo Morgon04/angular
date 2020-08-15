@@ -91,56 +91,57 @@
         .developer {
             display: flex;
             flex-direction: column;
-            width: 47%;
-            margin-right: 18px;
+            margin-right: 9px;
+            margin-left: 9px;
+            width: calc(100% / #{$le-two-columns} - #{$le-font-size-18px});
             padding: 18px 18px 0;
             border-radius: 4px;
 
-            .developer-reviews {
-
-                div {
-                    justify-content: flex-start;
-
-                    &:last-child {
-                        justify-content: flex-start;
-                    }
-                }
-
-            }
-        }
-
-        &:nth-child(1n+1) {
-            margin-left: 0;
         }
     }
 }
 
+
 @media (min-width:720px) {
+
     .developers-list {
         .developer {
-            width: 31.6%;
+            width: calc(100% / #{$le-three-columns} - #{$le-font-size-18px});
 
-            &:nth-child(3n+3) {
-                margin-right: 0;
+            .developer-reviews {
+                flex-direction: column;
+                padding-top: $le-8px;
+
+                div {
+                    padding: 0;
+                    padding-bottom: $le-5px;
+
+                    &:last-child {
+                        padding-bottom: $le-8px;
+                    }
+                }
+
+
             }
         }
     }
-
 }
 
 @media (min-width: 1024px) {
 
     .developers-list {
         .developer {
-            width: 31.6%;
 
-            &:nth-child(3n+3) {
-                margin-right: 0;
-            }
+            // margin-right: 9px;
+            // margin-left: 9px;
+            width: calc(100% / #{$le-three-columns} - #{$le-font-size-18px});
 
             .developer-reviews {
+                flex-direction: row;
+                padding-top: 0;
 
                 div {
+                    padding: 18px 0;
                     flex: 1 1 75%;
 
                     &:last-child {
@@ -156,15 +157,7 @@
         }
 
         .deve-w-inc {
-            width: 23.6%;
-
-            &:nth-child(3n+3) {
-                margin-right: 16px;
-            }
-
-            &:nth-child(4n+4) {
-                margin-right: 0;
-            }
+            width: calc(100% / #{$le-four-columns} - #{$le-font-size-18px});
 
             .developer-reviews {
 
@@ -175,9 +168,7 @@
                 &:last-child {
                     flex: 1 1 40%;
                 }
-
             }
-
 
         }
     }
@@ -186,39 +177,13 @@
 @media (min-width: 1280px) {
     .developers-list {
         .developer {
-            width: 23.6%;
-
-            &:nth-child(3n+3) {
-                margin-right: 16px;
-            }
-
-            &:nth-child(4n+4) {
-                margin-right: 0;
-            }
+            margin-right: $le-8px;
+            margin-left: $le-8px;
+            width: calc(100% / #{$le-four-columns} - #{$le-16px});
         }
 
         .deve-w-inc {
-            width: 18.8%;
-
-            &:nth-child(4n+4) {
-                margin-right: 16px;
-            }
-
-            &:nth-child(5n+5) {
-                margin-right: 0;
-            }
-        }
-    }
-}
-
-@media (min-width: 1600px) {
-    .developers-list {
-        .developer {
-            width: 23.9%;
-        }
-
-        .deve-w-inc {
-            width: 19.1%;
+            width: calc(100% / #{$le-five-columns} - #{$le-16px});
         }
     }
 }
