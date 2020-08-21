@@ -34,12 +34,16 @@ export class ResponsiveTopicsComponent implements OnInit {
         url: '/responsive/got'
       },
       {
-        name: 'Candidates List',
-        url: ''
+        name: 'Calendar',
+        url: '/responsive/calendar'
       },
       {
-        name: 'Candidates List',
-        url: ''
+        name: 'Courses',
+        url: '/responsive/course',
+      },
+      {
+        name: 'MSD',
+        url: '/responsive/msd',
       }
     ];
   }

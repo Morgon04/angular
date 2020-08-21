@@ -1,0 +1,142 @@
+@import "~src/assets/styles/variables.scss";
+@import "~src/assets/styles/common.scss";
+
+.msd {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    box-sizing: border-box;
+    padding: $le-20px;
+    background-color: white;
+
+    .msd-profile {
+        display: flex;
+        justify-content: center;
+
+        img {
+            width: 100%;
+            // height: 00px;
+        }
+    }
+
+    .msd-image {
+
+        z-index: 10;
+        padding: 0 $le-20px;
+        display: flex;
+
+        // justify-content: space-between;
+
+        img {
+            width: 130px;
+            height: 130px;
+            border-radius: 50%;
+            border: 2px solid #e0e0e0;
+            margin-top: -30px;
+        }
+
+        .msd-name {
+            font-size: 32px;
+            align-self: center;
+            margin-left: $le-20px;
+
+            .msd-born {
+                font-size: $le-font-size-18px;
+            }
+        }
+    }
+
+    .msd-details {
+        width: 95%;
+        margin: 0 auto;
+
+        .msd-description {
+
+            font-size: $le-16px;
+            margin-top: $le-18px;
+            // font-weight: $le-font-weight-500;
+        }
+    }
+
+    .quotes-on-msd {
+        display: flex;
+        flex-direction: row;
+        margin-top: $le-32px;
+
+        .quote-one,
+        .quote-two {
+            display: flex;
+            flex: 1 1 calc(100% / #{$le-two-columns} - #{$le-20px});
+            flex-direction: column;
+            margin-right: $le-20px;
+        }
+
+        .quote-one p,
+        .quote-two p {
+            display: flex;
+            flex-direction: column;
+            flex: 1 1 auto;
+            font-size: $le-font-size-16px;
+            font-weight: $le-font-weight-500;
+            color: #7d7c7c;
+            box-shadow:
+                0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+                0px 2px 2px 0px rgba(0, 0, 0, 0.14),
+                0px 1px 5px 0px rgba(0, 0, 0, 0.12);
+            padding: $le-12px $le-16px;
+            border-radius: 8px;
+
+            span {
+                margin-top: $le-4px;
+                align-self: flex-end;
+                // font-weight: $le-font-weight-500;
+            }
+        }
+
+    }
+
+    .msd-cups {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: $le-16px;
+
+        .msd-cup {
+            box-sizing: border-box;
+            width: 100%;
+            margin: 0 24px $le-20px;
+            display: flex;
+            flex-direction: column;
+            border-radius: $le-8px;
+
+            p {
+                display: flex;
+                justify-content: center;
+                font-size: $le-font-size-16px;
+                margin-bottom: 0;
+                padding: $le-20px;
+                font-weight: $le-font-weight-500;
+            }
+
+            img {
+                border-top-left-radius: $le-8px;
+                border-top-right-radius: $le-8px;
+            }
+        }
+    }
+
+}
+
+@media (min-width:1280px) {
+    .msd {
+        .msd-cups {
+            justify-content: center;
+            .msd-cup {
+                width: calc(100% / #{$le-three-columns} - 80px)
+            }
+
+            .msd-cup-w-inc {
+                width: calc(100% / #{$le-three-columns} - 140px); 
+            }
+        }
+    }
+}

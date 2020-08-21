@@ -57,6 +57,18 @@ export class BreadcrumService {
             {
               name: 'GOT',
               url: '/responsive/got',
+            },
+            {
+              name: 'Calendar',
+              url: '/responsive/calendar',
+            },
+            {
+              name: 'Courses',
+              url: '/responsive/course',
+            },
+            {
+              name: 'MS Dhoni',
+              url: '/responsive/msd',
             }
           ],
         }

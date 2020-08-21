@@ -8,6 +8,7 @@ import { ReponsiveRoutingModule } from './reponsive-routing.module';
 // Angular Material Import
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
 
 
 // Shared Module Import
@@ -23,6 +24,9 @@ import { CandidateListComponent } from './candidate-list/candidate-list.componen
 import { DevelopersComponent } from './developers/developers.component';
 import { DesignComponent } from './design/design.component';
 import { GotCastsComponent } from './got-casts/got-casts.component';
+import { CalendarComponent } from './calendar/calendar.component';
+import { CoursesListComponent } from './courses-list/courses-list.component';
+import { MsdComponent } from './msd/msd.component';
 
 
 @NgModule({
@@ -32,7 +36,10 @@ import { GotCastsComponent } from './got-casts/got-casts.component';
     CandidateListComponent,
     DevelopersComponent,
     DesignComponent,
-    GotCastsComponent
+    GotCastsComponent,
+    CalendarComponent,
+    CoursesListComponent,
+    MsdComponent
   ],
   imports: [
     CommonModule,
@@ -40,6 +47,7 @@ import { GotCastsComponent } from './got-casts/got-casts.component';
     // Angular Material
     MatIconModule,
     MatProgressSpinnerModule,
+    MatProgressBarModule,
 
     // Shared Module
     SharedModule,

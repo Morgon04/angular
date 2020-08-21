@@ -1,0 +1,12 @@
+<div class="calendars">
+    <div class="calendar mat-elevation-z2" *ngFor="let item of calendarItems" [class.cal-w-inc]="sidenavState">
+        <div class="date">
+            <p class="date-string"> {{ item.date }} </p>
+            <h4 class="topic"> {{item.type }} </h4>
+        </div>
+        <div class="calendar-count">
+            <p class="count"> {{ item.count }} </p>
+            <p class="description"> {{ 'Calendar' }} </p>
+        </div>
+    </div>
+</div>

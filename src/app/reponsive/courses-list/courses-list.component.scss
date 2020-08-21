@@ -1,0 +1,106 @@
+@import "~src/assets/styles/variables.scss";
+@import "~src/assets/styles/common.scss";
+
+.courses {
+    display: flex;
+    flex-wrap: wrap;
+
+    .course {
+        width: 100%;
+        margin: 0 10px 20px;
+        background-color: white;
+        box-sizing: border-box;
+        border-radius: $le-8px;
+
+        .course-image {
+            width: 100%;
+
+            img {
+                width: 100%;
+                height: 155px;
+                border-top-left-radius: $le-8px;
+                border-top-right-radius: $le-8px;
+            }
+        }
+
+        .course-details {
+            padding: $le-18px;
+
+            .course-name {
+                font-size: $le-font-size-18px;
+                font-weight: $le-font-weight-600;
+            }
+
+            .course-description {
+                font-size: $le-font-size-14px;
+                color: darkgrey;
+            }
+
+            .course-seen {
+                display: flex;
+                flex-direction: row;
+
+                .purchase-progress,
+                .purchase-image {
+                    width: 100%;
+                    max-width: 50%;
+                    display: flex;
+                    align-items: center;
+                }
+
+                .purchase-image {
+
+                    img {
+                        width: 30px;
+                        height: 30px;
+                        border-radius: 50%;
+                        border: 2px solid #e0e0e0;
+
+                        &:not(.first) {
+                            margin-left: -9px;
+                        }
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 640px) {
+    .courses {
+        .course {
+            width: calc(100% / #{$le-two-columns} - #{$le-20px});
+        }
+    }
+}
+
+@media (min-width: 768px) {
+    .courses {
+        .course {
+            width: calc(100% / #{$le-two-columns} - #{$le-20px});
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .courses {
+        .cou-i-w {
+            width: calc(100% / #{$le-three-columns} - #{$le-20px});
+        }
+    }
+}
+
+@media (min-width:1280px) {
+    .courses {
+        .course {
+            width: calc(100% / #{$le-three-columns} - #{$le-20px});
+        }
+
+        .cou-i-w {
+            width: calc(100% / #{$le-four-columns} - #{$le-20px});
+        }
+
+    }
+
+}

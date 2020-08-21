@@ -1,0 +1,128 @@
+@import "~src/assets/styles/variables.scss";
+@import "~src/assets/styles/common.scss";
+
+.calendars {
+    display: flex;
+    flex-wrap: wrap;
+
+    .calendar {
+        display: flex;
+        flex-direction: column;
+        padding: $le-20px;
+        width: calc(100% / #{$le-two-columns} - #{$le-18px});
+        box-sizing: border-box;
+        margin: 0 9px $le-20px;
+        // background-color: white;
+        position: relative;
+
+        &::before {
+            width: calc(100% - 38px);
+            background-color: red;
+            height: 2.5px;
+            content: '';
+            top: -2px;
+            position: absolute;
+
+
+        }
+
+        &:nth-child(2n+2) {
+
+            &::before {
+                background-color: orange;
+            }
+        }
+
+        &:nth-child(3n+3) {
+
+            &::before {
+                background-color: blue;
+            }
+        }
+
+        &:nth-child(4n+4) {
+
+            &::before {
+                background-color: green;
+            }
+        }
+
+        .date {
+            .date-string {
+                margin-bottom: $le-5px;
+                color: darkgrey;
+                font-weight: $le-font-weight-500;
+            }
+
+            .topic {
+                font-weight: $le-font-weight-600;
+                margin-bottom: $le-16px;
+                position: relative;
+                padding-left: $le-20px;
+
+                &::before {
+                    background: #54957f;
+                    content: '';
+                    width: 10px;
+                    height: 10px;
+                    position: absolute;
+                    left: 2px;
+                    top: 50%;
+                    margin-top: -5px;
+                    border-radius: 50%;
+                }
+            }
+        }
+
+        .calendar-count {
+            display: flex;
+            position: relative;
+
+            .count {
+                margin-top: $le-10px;
+                font-size: 50px;
+            }
+
+            .description {
+                position: absolute;
+                bottom: -1px;
+                margin-left: $le-12px;
+                margin-bottom: 0;
+                left: 45px;
+                color: darkgrey;
+            }
+        }
+    }
+}
+
+@media (min-width:640px) {
+    .calendars {
+
+        .calendar {
+            width: calc(100% / #{$le-three-columns} - #{$le-18px});
+        }
+    }
+}
+
+
+@media (min-width:1024px) {
+    .calendars {
+
+        .calendar {
+            width: calc(100% / #{$le-three-columns} - #{$le-18px});
+        }
+    }
+}
+
+@media (min-width:1280px) {
+    .calendars {
+
+        .calendar {
+            width: calc(100% / #{$le-four-columns} - #{$le-18px});
+        }
+
+        .cal-w-inc {
+            width: calc(100% / #{$le-five-columns} - #{$le-18px});
+        }
+    }
+}

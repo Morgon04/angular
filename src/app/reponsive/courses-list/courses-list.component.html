@@ -1,0 +1,20 @@
+<div class="courses">
+    <div class="course mat-elevation-z2" *ngFor="let course of courseList" [class.cou-i-w]="sidenavState">
+        <div class="course-image">
+            <img src="{{course.image}}">
+        </div>
+        <div class="course-details">
+            <p class="course-name"> {{ course.courseName }} </p>
+            <h4 class="course-description"> {{ course.description }} </h4>
+
+            <div class="course-seen">
+                <div class="purchase-image">
+                    <img *ngFor="let profile of profiles;let i=index" src="{{profile}}" [class.first]="i===0">
+                </div>
+                <div class="purchase-progress">
+                    <mat-progress-bar mode="buffer" value="{{ course.value }}"></mat-progress-bar>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
