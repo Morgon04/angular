@@ -13,6 +13,9 @@
                                     <div *ngIf="todoCreate.get('name').errors?.required">
                                         {{ 'Please Enter title' }}
                                     </div>
+                                    <div *ngIf="todoCreate.get('name').errors?.nameLengthNotValid">
+                                        {{ 'Name must be greater than or equal to 8' }}
+                                    </div>
                                 </mat-error>
                             </mat-form-field>
                         </div>

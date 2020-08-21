@@ -9,6 +9,9 @@ import { MatSnackBar } from '@angular/material/snack-bar';
 // Service Import
 import { ToDoService } from '../_service/to-do.service';
 
+// Reactive Form Custom Validators Import
+import { ReactiveFormCustomValidators } from 'src/app/core/reactive-form-custom-validators';
+
 // Component Import
 import { SnackBarComponent } from 'src/app/shared/snack-bar/snack-bar.component';
 import { finalize } from 'rxjs/internal/operators/finalize';
@@ -35,7 +38,7 @@ export class CreateComponent implements OnInit {
 
   public initializeTodoFormGroup(): void {
     this.todoCreate = this.formbuilder.group({
-      name: ['', Validators.required],
+      name: ['', [Validators.required, ReactiveFormCustomValidators.checkNameLength(8)]],
       priority: ['', Validators.required],
       displayOrder: '',
       todoDate: new Date(),
