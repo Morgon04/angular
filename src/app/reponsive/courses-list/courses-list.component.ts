@@ -59,7 +59,7 @@ export class CoursesListComponent implements OnInit {
     {
       image: 'https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcQjXXDyVFsAMPdUTJjV3izfq0NAn4YY01O2WA&usqp=CAU',
       courseName: 'MEVN Stack Developer',
-      description: 'MEVN stack is the open-source JavaScript software stack that has emerged as a new and evolving way to build powerful and dynamic web applications...',
+      description: 'MEVN stack is the open-source JavaScript software stack that has emerged as a new and evolving way to build powerful and dynamic web...',
       value: 78
     },
     {

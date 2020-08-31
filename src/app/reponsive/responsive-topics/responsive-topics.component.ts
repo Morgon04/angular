@@ -44,6 +44,10 @@ export class ResponsiveTopicsComponent implements OnInit {
       {
         name: 'MSD',
         url: '/responsive/msd',
+      },
+      {
+        name: 'Appointments List',
+        url: '/responsive/appointments',
       }
     ];
   }

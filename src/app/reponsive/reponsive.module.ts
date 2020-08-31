@@ -10,7 +10,6 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 
-
 // Shared Module Import
 import { SharedModule } from '../shared/shared.module';
 
@@ -27,6 +26,8 @@ import { GotCastsComponent } from './got-casts/got-casts.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { CoursesListComponent } from './courses-list/courses-list.component';
 import { MsdComponent } from './msd/msd.component';
+import { AppointmentsListComponent } from './appointments-list/appointments-list.component';
+import { TicketComponent } from './ticket/ticket.component';
 
 
 @NgModule({
@@ -39,7 +40,9 @@ import { MsdComponent } from './msd/msd.component';
     GotCastsComponent,
     CalendarComponent,
     CoursesListComponent,
-    MsdComponent
+    MsdComponent,
+    AppointmentsListComponent,
+    TicketComponent
   ],
   imports: [
     CommonModule,

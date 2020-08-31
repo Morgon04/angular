@@ -69,6 +69,10 @@ export class BreadcrumService {
             {
               name: 'MS Dhoni',
               url: '/responsive/msd',
+            },
+            {
+              name: 'Appointments List',
+              url: '/responsive/appointments',
             }
           ],
         }

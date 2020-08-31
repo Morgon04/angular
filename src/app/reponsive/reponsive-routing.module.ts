@@ -15,6 +15,7 @@ import { GotCastsComponent } from './got-casts/got-casts.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { CoursesListComponent } from './courses-list/courses-list.component';
 import { MsdComponent } from './msd/msd.component';
+import { AppointmentsListComponent } from './appointments-list/appointments-list.component';
 
 const responsiveRoutes: Routes = [
   ShellService.child(
@@ -68,6 +69,11 @@ const responsiveRoutes: Routes = [
             path: 'msd',
             component: MsdComponent,
             data: { title: 'Mahendra Singh Dhoni' },
+          },
+          {
+            path: 'appointments',
+            component: AppointmentsListComponent,
+            data: { title: 'Appointment List' },
           }
         ]
       }

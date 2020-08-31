@@ -1,0 +1,52 @@
+<div class="appointments-list">
+    <div class="appointments mat-elevation-z2" *ngFor="let app of appointmentsList"
+        [class.orange-border]="app.status === 'Pending Approval'" [class.red-border]="app.status === 'Rejected'">
+        <div class="first-one">
+            <p class="text-bold"> {{ app.title }} </p>
+            <h4 [class.blue]="app.status === 'Approved'||app.status === 'New'"
+                [class.red]="app.status === 'Rejected'" [class.orange]="app.status === 'Pending Approval'">
+                <span class="status-color"></span>
+                {{ app.status }} </h4>
+        </div>
+        <div class="second-one">
+            <p class="text-bold">
+                <mat-icon>
+                    <span class="material-icons">
+                        calendar_today
+                    </span>
+                </mat-icon> {{ app.date }}
+            </p>
+            <h4 class="grey">
+                <mat-icon>
+                    <span class="material-icons">
+                        access_time
+                    </span>
+                </mat-icon>
+                {{ app.time }}
+            </h4>
+        </div>
+        <div class="third-one">
+            <div class="image">
+                <img src={{app.image}}>
+            </div>
+            <div>
+                <p class="text-bold"> {{ app.name }} </p>
+                <h4 class="grey">
+                    <mat-icon>
+                        <span class="material-icons">
+                            call
+                        </span>
+                    </mat-icon>
+                    {{ app.number }}
+                </h4>
+            </div>
+        </div>
+        <div class="fourth">
+            <mat-icon>
+                <span class="material-icons">
+                    arrow_right_alt
+                </span>
+            </mat-icon>
+        </div>
+    </div>
+</div>
