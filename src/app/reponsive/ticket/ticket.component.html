@@ -1,1 +1,147 @@
-<p>ticket works!</p>
+<div class="tickets-heading">
+    <p>Hot ticket</p>
+    <div class="tickets-btn">
+        <ul>
+            <li *ngFor="let btn of btnList" [class.active-btn-first]="btn.name=== 'All' && btn.selected"
+                [class.active-btn-second]="btn.name=== 'Unread' && btn.selected"
+                [class.active-btn-third]="btn.name=== 'Important' && btn.selected" (click)="markBtnSelected(btn)">
+                {{ btn.name }} </li>
+        </ul>
+    </div>
+</div>
+<div class="tickets-container">
+    <div class="tickets">
+        <div *ngFor="let ticket of ticketsList" class="tickets-list">
+            <div class="ticket" [class.ticket-selected]="ticket.selected">
+                <div class="ticket-action">
+                    <div class="ticket-action-btn" (click)="markTicketSelected(ticket)">
+                        <mat-icon *ngIf="!ticket.selected">
+                            <span class="material-icons">
+                                panorama_fish_eye
+                            </span>
+                        </mat-icon>
+                        <mat-icon *ngIf="ticket.selected">
+                            <span class="material-icons">
+                                check_circle
+                            </span>
+                        </mat-icon>
+                    </div>
+                    <div>
+                        <mat-icon>
+                            <span class="material-icons">
+                                delete
+                            </span>
+                        </mat-icon>
+                    </div>
+                </div>
+                <div class="ticket-image">
+                    <img src="{{ticket.image}}">
+                    <p class="ticket-image-name"> {{ ticket.name }} </p>
+                    <p class="ticket-image-country">
+                        <mat-icon>
+                            <span class="material-icons">
+                                location_on
+                            </span>
+                        </mat-icon>
+                        <span>{{ ticket.country }}</span>
+                    </p>
+                </div>
+                <div class="ticket-info">
+                    <div class="ticket-info-followers">
+                        <p> Followers </p>
+                        <h5> {{ ticket.followers }} </h5>
+                    </div>
+                    <div class="ticket-info-following">
+                        <p> Following </p>
+                        <h5>{{ ticket.following }}</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="tickets-second">
+        <div class="tickets-second-recommend">
+            <p class="tickets-second-heading">
+                Recommend
+            </p>
+            <div *ngFor="let rec of recommentList;let i=index" class="tickets-second-list">
+                <div class="tickets-second-list-body">
+                    <div class="tickets-second-list-heading">
+                        <p>{{rec.heading}}</p>
+
+                        <div>
+                            <ul class="tickets-second-list-heading-rating-list">
+                                <li *ngFor="let star of stars; let i= index" [class.selected]="i<rec.stars"> ★ </li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="tickets-second-list-description">
+                        <p>
+                            {{rec.description}}
+                        </p>
+
+                    </div>
+                    <div class="tickets-second-list-action">
+                        <p>Read more ></p>
+                        <div class="tickets-second-list-action-list">
+                            <ul [class.blue]="i===0">
+                                <li>
+                                    <mat-icon>
+                                        <span class="material-icons">
+                                            favorite
+                                        </span>
+                                    </mat-icon>
+                                    <span> {{ rec.like }}</span>
+                                </li>
+                                <li>
+                                    <mat-icon>
+                                        <span class="material-icons">
+                                            chat_bubble
+                                        </span>
+                                    </mat-icon>
+                                    <span> {{ rec.comment }} </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="tickets-second-list-image">
+                    <img src="../../../assets/images/yes.jpg">
+                </div>
+            </div>
+        </div>
+        <div class="tickets-second-data">
+            <p class="tickets-second-data-heading">
+                Data
+            </p>
+            <div class="tickets-second-data-listing">
+                <div class="tickets-second-data-list" *ngFor="let data of datalist;let i=index">
+                    <div class="tickets-second-data-list-info">
+                        <p class="tickets-second-data-list-info-heading">{{data.heading}}</p>
+                        <div class="tickets-second-data-list-info-details">
+                            <p *ngIf="i===0" [class.orange]="i===0">
+                                <span>+</span>23.50
+                            </p>
+                            <p *ngIf="i===1" [class.blue]="i===1">
+                                <span>-</span>13.2
+                            </p>
+                            <div class="tickets-second-data-list-info-detail">
+                                <p>
+                                    <span [class.orange]="i===0" [class.blue]="i===1" class="dot">
+                                    </span>
+                                    The boy
+                                </p>
+                                <p><span class="dot girl"></span>The girl</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="tickets-second-data-list-percentage">
+                        <mat-progress-spinner color="#54957f" [diameter]="spinnerDiameter"
+                        [value]="data.percentage" [class.orange]="i===0" [class.blue]="i===1">
+                    </mat-progress-spinner><span class="completed">{{ data.percentage + '%' }}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

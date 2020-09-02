@@ -63,3 +63,12 @@ body {
 .mat-progress-spinner circle {
     stroke: #54957f;
 }
+
+
+.orange.mat-progress-spinner circle {
+    stroke: orange !important;
+}
+
+.blue.mat-progress-spinner circle {
+    stroke: dodgerblue !important;
+}

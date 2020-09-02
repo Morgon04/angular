@@ -48,6 +48,10 @@ export class ResponsiveTopicsComponent implements OnInit {
       {
         name: 'Appointments List',
         url: '/responsive/appointments',
+      },
+      {
+        name: 'Hot Tickets',
+        url: '/responsive/tickets',
       }
     ];
   }

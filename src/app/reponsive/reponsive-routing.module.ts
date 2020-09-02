@@ -6,15 +6,16 @@ import { Routes, RouterModule } from '@angular/router';
 import { ShellService } from './../shell/shell.service';
 
 // Component Import
-import { ListComponent } from './list/list.component';
-import { ResponsiveTopicsComponent } from './responsive-topics/responsive-topics.component';
-import { CandidateListComponent } from './candidate-list/candidate-list.component';
-import { DevelopersComponent } from './developers/developers.component';
-import { DesignComponent } from './design/design.component';
-import { GotCastsComponent } from './got-casts/got-casts.component';
-import { CalendarComponent } from './calendar/calendar.component';
-import { CoursesListComponent } from './courses-list/courses-list.component';
 import { MsdComponent } from './msd/msd.component';
+import { ListComponent } from './list/list.component';
+import { DesignComponent } from './design/design.component';
+import { TicketComponent } from './ticket/ticket.component';
+import { CalendarComponent } from './calendar/calendar.component';
+import { GotCastsComponent } from './got-casts/got-casts.component';
+import { DevelopersComponent } from './developers/developers.component';
+import { CoursesListComponent } from './courses-list/courses-list.component';
+import { CandidateListComponent } from './candidate-list/candidate-list.component';
+import { ResponsiveTopicsComponent } from './responsive-topics/responsive-topics.component';
 import { AppointmentsListComponent } from './appointments-list/appointments-list.component';
 
 const responsiveRoutes: Routes = [
@@ -73,6 +74,11 @@ const responsiveRoutes: Routes = [
           {
             path: 'appointments',
             component: AppointmentsListComponent,
+            data: { title: 'Appointment List' },
+          },
+          {
+            path: 'tickets',
+            component: TicketComponent,
             data: { title: 'Appointment List' },
           }
         ]
