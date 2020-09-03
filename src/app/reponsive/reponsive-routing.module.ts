@@ -14,6 +14,7 @@ import { CalendarComponent } from './calendar/calendar.component';
 import { GotCastsComponent } from './got-casts/got-casts.component';
 import { DevelopersComponent } from './developers/developers.component';
 import { CoursesListComponent } from './courses-list/courses-list.component';
+import { TeamMembersComponent } from './team-members/team-members.component';
 import { CandidateListComponent } from './candidate-list/candidate-list.component';
 import { ResponsiveTopicsComponent } from './responsive-topics/responsive-topics.component';
 import { AppointmentsListComponent } from './appointments-list/appointments-list.component';
@@ -79,7 +80,12 @@ const responsiveRoutes: Routes = [
           {
             path: 'tickets',
             component: TicketComponent,
-            data: { title: 'Appointment List' },
+            data: { title: 'Hot Tickets' },
+          },
+          {
+            path: 'team-members',
+            component: TeamMembersComponent,
+            data: { title: 'Team Members' },
           }
         ]
       }

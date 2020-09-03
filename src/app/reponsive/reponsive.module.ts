@@ -9,6 +9,7 @@ import { ReponsiveRoutingModule } from './reponsive-routing.module';
 import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatButtonModule } from '@angular/material/button';
 
 // Shared Module Import
 import { SharedModule } from '../shared/shared.module';
@@ -28,6 +29,7 @@ import { CoursesListComponent } from './courses-list/courses-list.component';
 import { MsdComponent } from './msd/msd.component';
 import { AppointmentsListComponent } from './appointments-list/appointments-list.component';
 import { TicketComponent } from './ticket/ticket.component';
+import { TeamMembersComponent } from './team-members/team-members.component';
 
 
 @NgModule({
@@ -42,7 +44,8 @@ import { TicketComponent } from './ticket/ticket.component';
     CoursesListComponent,
     MsdComponent,
     AppointmentsListComponent,
-    TicketComponent
+    TicketComponent,
+    TeamMembersComponent
   ],
   imports: [
     CommonModule,
@@ -51,6 +54,7 @@ import { TicketComponent } from './ticket/ticket.component';
     MatIconModule,
     MatProgressSpinnerModule,
     MatProgressBarModule,
+    MatButtonModule,
 
     // Shared Module
     SharedModule,
