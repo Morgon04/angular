@@ -38,7 +38,7 @@ export class CreateComponent implements OnInit {
 
   public initializeTodoFormGroup(): void {
     this.todoCreate = this.formbuilder.group({
-      name: ['', [Validators.required, ReactiveFormCustomValidators.checkNameLength(8)]],
+      name: ['', [Validators.required, ReactiveFormCustomValidators.checkName(8)]],
       priority: ['', Validators.required],
       displayOrder: '',
       todoDate: new Date(),

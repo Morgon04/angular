@@ -16,6 +16,9 @@
                                     <div *ngIf="todoCreate.get('name').errors?.nameLengthNotValid">
                                         {{ 'Name must be greater than or equal to 8' }}
                                     </div>
+                                    <div *ngIf="todoCreate.get('name').errors?.onlyAlpha">
+                                        {{ 'Name must have only Alphabets' }}
+                                    </div>
                                 </mat-error>
                             </mat-form-field>
                         </div>
