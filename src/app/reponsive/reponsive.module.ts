@@ -18,18 +18,20 @@ import { SharedModule } from '../shared/shared.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 // Component Import
-import { ListComponent } from './list/list.component';
-import { ResponsiveTopicsComponent } from './responsive-topics/responsive-topics.component';
-import { CandidateListComponent } from './candidate-list/candidate-list.component';
-import { DevelopersComponent } from './developers/developers.component';
-import { DesignComponent } from './design/design.component';
-import { GotCastsComponent } from './got-casts/got-casts.component';
-import { CalendarComponent } from './calendar/calendar.component';
-import { CoursesListComponent } from './courses-list/courses-list.component';
 import { MsdComponent } from './msd/msd.component';
-import { AppointmentsListComponent } from './appointments-list/appointments-list.component';
+import { ListComponent } from './list/list.component';
 import { TicketComponent } from './ticket/ticket.component';
+import { DesignComponent } from './design/design.component';
+import { CalendarComponent } from './calendar/calendar.component';
+import { ExpensesComponent } from './expenses/expenses.component';
+import { GotCastsComponent } from './got-casts/got-casts.component';
+import { DevelopersComponent } from './developers/developers.component';
+import { CoursesListComponent } from './courses-list/courses-list.component';
 import { TeamMembersComponent } from './team-members/team-members.component';
+import { CandidateListComponent } from './candidate-list/candidate-list.component';
+import { AppointmentsListComponent } from './appointments-list/appointments-list.component';
+import { MedicalDashboardComponent } from './medical-dashboard/medical-dashboard.component';
+import { ResponsiveTopicsComponent } from './responsive-topics/responsive-topics.component';
 
 
 @NgModule({
@@ -45,7 +47,9 @@ import { TeamMembersComponent } from './team-members/team-members.component';
     MsdComponent,
     AppointmentsListComponent,
     TicketComponent,
-    TeamMembersComponent
+    TeamMembersComponent,
+    ExpensesComponent,
+    MedicalDashboardComponent
   ],
   imports: [
     CommonModule,

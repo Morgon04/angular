@@ -1,0 +1,15 @@
+<div class="account-container">
+    <div class="account-container-card">
+        <div class="account-container-card-header">
+            <h2 class="account-container-card-header-text" (click)="reroute('sign-in')">
+                SIGN-IN
+                <span [class.active]="activatedUrl==='/account/sign-in'"></span>
+            </h2>
+            <h2 class="account-container-card-header-text sign-up" (click)="reroute('sign-up')">
+                SIGN-UP
+                <span [class.active]="activatedUrl==='/account/sign-up'"></span>
+            </h2>
+        </div>
+        <router-outlet></router-outlet>
+    </div>
+</div>

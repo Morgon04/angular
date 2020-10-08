@@ -81,6 +81,10 @@ export class BreadcrumService {
             {
               name: 'Team Members',
               url: '/responsive/team-members',
+            },
+            {
+              name: 'Expenses',
+              url: '/responsive/expenses',
             }
           ],
         }

@@ -1,0 +1,94 @@
+<div class="expenses-heading">
+    Expenses
+</div>
+<div class="expenses-list">
+    <div class="expense" *ngFor="let exp of expensesList;let expIdx=index" [class.expense-w-inc]="sidenavState">
+        <div class="expense-border" 
+        [class.orange]="exp.category ==='Software'" 
+        [class.blue]="exp.category ==='Travel'"
+        [class.green]="exp.category ==='Book'"
+        [class.red]="exp.category ==='Food'">
+    </div>
+        <div class="expense-details">
+            <div class="expense-details-image">
+                <img src="{{exp.image}}">
+            </div>
+            <div class="expense-details-det">
+                <p class="expense-details-det-item-name">{{exp.itemName}}</p>
+                <p class="expense-details-det-name">
+                    <mat-icon>
+                        <span class="material-icons">
+                            bookmark_border
+                        </span>
+                    </mat-icon>
+                    <span class="name">
+                        {{exp.name}}
+                    </span>
+                </p>
+                <div class="expense-details-det-time">
+                    <p class="time">
+                        <mat-icon>
+                            <span class="material-icons">
+                                access_time
+                            </span>
+                        </mat-icon>
+                        <span>
+                            {{exp.time}}
+                        </span>
+                    </p>
+                    <p class="date">
+                        <mat-icon>
+                            <span class="material-icons">
+                                event
+                            </span>
+                        </mat-icon>
+                        <span>
+                            {{exp.date}}
+                        </span>
+                    </p>
+                </div>
+            </div>
+        </div>
+        <div class="expense-category">
+            <div class="exp-category">
+                <p class="exp-note-p">Category</p>
+                <p class="exp-cate-data" [class.orange]="exp.category ==='Software'"
+                    [class.blue]="exp.category ==='Travel'" [class.green]="exp.category ==='Book'"
+                    [class.red]="exp.category ==='Food'">
+                    <span></span>
+                    {{exp.category}}
+                </p>
+            </div>
+            <div class="exp-note">
+                <p class="exp-note-p">Add Note</p>
+                <span class="exp-note-data" title="{{exp.note}}">
+                    {{exp.note}}
+                </span>
+            </div>
+        </div>
+        <div class="expense-budget">
+            <div class="exp-category">
+                <p class="exp-note-p">Amount</p>
+                <p class="exp-note-data">
+                    {{exp.amount}}
+                </p>
+            </div>
+            <div class="exp-note">
+                <p class="exp-note-p">Budget</p>
+
+                <p class="exp-note-icon">
+                    <mat-icon *ngIf="exp.budget" class="blue">
+                        <span class="material-icons">
+                            lock
+                        </span>
+                    </mat-icon>
+                    <mat-icon *ngIf="!exp.budget" class="grey">
+                        <span class="material-icons">
+                            lock_open
+                        </span>
+                    </mat-icon>
+                </p>
+            </div>
+        </div>
+    </div>
+</div>

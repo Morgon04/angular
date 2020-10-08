@@ -1,0 +1,53 @@
+@import "~src/assets/styles/variables.scss";
+@import "~src/assets/styles/common.scss";
+
+.account-container {
+
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    min-height: 100%;
+
+    .account-container-card {
+        display: flex;
+        flex-direction: column;
+        width: 30%;
+        border-radius: $le-8px;
+        background-color: white;
+        box-sizing: border-box;
+        padding-bottom: $le-20px;
+
+        .account-container-card-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: $le-main-color;
+            box-shadow: 0 0px 10px rgba(0, 0, 0, 0.17);
+            padding-top: $le-10px;
+            padding-bottom: $le-10px;
+            border-top-left-radius: $le-8px;
+            border-top-right-radius: $le-8px;
+            color: white;
+            padding-left: $le-20px;
+            padding-right: $le-20px;
+
+            h2 {
+                margin-bottom: 0;
+                position: relative;
+                cursor: pointer;
+
+                span.active {
+                    width: 100%;
+                    height: 3px;
+                    background-color: white;
+                    position: absolute;
+                    bottom: -2px;
+                    right: 0;
+                }
+            }
+        }
+    }
+}

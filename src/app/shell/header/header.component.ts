@@ -1,5 +1,6 @@
-
-import { Component, OnInit, Output, EventEmitter, Input } from '@angular/core';
+// Angular Import
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
+import { Router } from '@angular/router';
 
 // Service Import
 import { ShellService } from './../shell.service';
@@ -15,10 +16,11 @@ export class HeaderComponent implements OnInit {
 
   headerText = 'Learning';
   constructor(
-    private shellService: ShellService
+    private shellService: ShellService,
+    private router: Router
   ) { }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
     this.shellService.headerText$
       .subscribe((text: string) => {
         if (text) {
@@ -30,6 +32,10 @@ export class HeaderComponent implements OnInit {
   // Sidenav Toggle
   public toggleSidenav() {
     this.eventToggle.emit();
+  }
+
+  public navigateToAccount(): void {
+    this.router.navigateByUrl('account');
   }
 
 }

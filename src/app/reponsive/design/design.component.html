@@ -27,11 +27,12 @@
                 <p>
                     <span class="tasks">{{ team.totalTasks }} Tasks</span>
                 </p>
-                <p class="spinner">
+                <div class="spinner">
+                    <div class="spinner-background"></div>
                     <mat-progress-spinner color="#54957f" [diameter]="spinnerDiameter"
                         [value]="team.completedPercentage">
                     </mat-progress-spinner><span class="completed">{{ team.completedPercentage + '%' }}</span>
-                </p>
+                </div>
             </div>
 
             <div class="team-action">

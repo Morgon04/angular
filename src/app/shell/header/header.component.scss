@@ -15,3 +15,14 @@
 .material-icons {
     color: white;
 }
+
+.login-btn {
+    background: transparent;
+    border: none;
+    color: white;
+    outline: none;
+    cursor: pointer;
+    padding: $le-8px $le-16px;
+    font-weight: $le-font-weight-600;
+    font-size: $le-font-size-15px;
+}

@@ -1,3 +1,4 @@
+import { ExpensesComponent } from './expenses/expenses.component';
 // Angular Import
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -18,6 +19,7 @@ import { TeamMembersComponent } from './team-members/team-members.component';
 import { CandidateListComponent } from './candidate-list/candidate-list.component';
 import { ResponsiveTopicsComponent } from './responsive-topics/responsive-topics.component';
 import { AppointmentsListComponent } from './appointments-list/appointments-list.component';
+import { MedicalDashboardComponent } from './medical-dashboard/medical-dashboard.component';
 
 const responsiveRoutes: Routes = [
   ShellService.child(
@@ -86,6 +88,16 @@ const responsiveRoutes: Routes = [
             path: 'team-members',
             component: TeamMembersComponent,
             data: { title: 'Team Members' },
+          },
+          {
+            path: 'expenses',
+            component: ExpensesComponent,
+            data: { title: 'Expenses' },
+          },
+          {
+            path: 'medical-dashboard',
+            component: MedicalDashboardComponent,
+            data: { title: 'Medical Expenses' },
           }
         ]
       }

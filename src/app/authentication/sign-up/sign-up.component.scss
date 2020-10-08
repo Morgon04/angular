@@ -1,0 +1,31 @@
+@import "~src/assets/styles/variables.scss";
+@import "~src/assets/styles/common.scss";
+
+.account-container-card-content {
+    padding-top: $le-20px;    
+}
+
+.account-container-card-content,
+.account-container-card-action {
+    padding-left: $le-20px;
+    padding-right: $le-20px;
+}
+
+.account-container-card-action {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: $le-20px;
+
+    .login-btn {
+        width: 100%;
+        outline: none;
+        padding: $le-10px $le-20px;
+        border: none;
+        background-color: $le-main-color;
+        color: white;
+        font-size: $le-font-size-16px;
+        border-radius: $le-4px;
+        font-weight: $le-font-weight-600;
+        cursor: pointer;
+    }
+}

@@ -102,18 +102,17 @@
 
 @media (min-width: 1024px) {
     .got-casts-list {
-        .got-casts {
+        .cast-w-inc {
             width: 33%;
-
-            .got-cast {
-                min-height: 410px;
-            }
         }
     }
 }
 
 @media (min-width:1280px) {
     .got-casts-list {
+        .got-casts {
+            width: 33%;
+        }
         .cast-w-inc {
             width: 25%;
         }

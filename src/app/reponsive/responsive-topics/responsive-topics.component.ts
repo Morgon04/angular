@@ -56,6 +56,14 @@ export class ResponsiveTopicsComponent implements OnInit {
       {
         name: 'Team Members',
         url: '/responsive/team-members',
+      },
+      {
+        name: 'Expenses',
+        url: '/responsive/expenses',
+      },
+      {
+        name: 'Medical Dashboard',
+        url: '/responsive/medical-dashboard',
       }
     ];
   }

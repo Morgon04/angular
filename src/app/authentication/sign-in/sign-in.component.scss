@@ -1,0 +1,30 @@
+@import "~src/assets/styles/variables.scss";
+@import "~src/assets/styles/common.scss";
+
+.account-container-card-content {
+    padding-top: $le-20px;
+
+    .login-username {
+        margin-bottom: $le-10px;
+    }
+
+    .login-remember {
+        display: flex;
+        justify-content: flex-end;
+        align-items: flex-end;
+    }
+}
+
+.account-container-card-content,
+.account-container-card-action {
+    padding-left: $le-20px;
+    padding-right: $le-20px;
+}
+
+.account-container-card-action {
+    width: 90%;
+    margin: 0 auto;
+    margin-top: $le-20px;
+
+    
+}

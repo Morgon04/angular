@@ -12,6 +12,7 @@ body {
 body {
     margin: 0;
     font-family: 'Roboto', "Helvetica Neue", sans-serif;
+    background-color: #f5f7fa;
 }
 
 .container {
@@ -85,4 +86,33 @@ body {
     background-color: #ffffff;
     border: 1px solid #f2f5f9;
     box-shadow: none;
+}
+
+.f-width {
+    width: 100%;
+}
+
+.account-question-text {
+    display: flex;
+    justify-content: center;
+
+    a {
+        text-decoration: none;
+        color: $le-main-color;
+        padding-left: $le-5px;
+    }
+}
+
+.login-btn {
+    width: 100%;
+    outline: none;
+    padding: $le-10px $le-20px;
+    border: none;
+    background-color: $le-main-color;
+    color: white;
+    font-size: $le-font-size-16px;
+    border-radius: $le-4px;
+    font-weight: $le-font-weight-600;
+    cursor: pointer;
+    margin-bottom: $le-10px;
 }

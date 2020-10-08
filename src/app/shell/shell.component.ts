@@ -19,6 +19,9 @@ export class ShellComponent implements OnInit, OnDestroy, AfterViewInit {
   // header properties
   public headerText: string;
 
+  // Side Nav Mode variable
+  sideNavMode: 'over' | 'side' = 'side';
+
   mobileQuery: MediaQueryList;
 
   // tslint:disable-next-line: variable-name
@@ -30,7 +33,7 @@ export class ShellComponent implements OnInit, OnDestroy, AfterViewInit {
     private coreService: CoreService
   ) {
 
-    this.mobileQuery = this.media.matchMedia('(max-width: 1023px)');
+    this.mobileQuery = this.media.matchMedia('(max-width: 1024px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     // tslint:disable-next-line: deprecation
     this.mobileQuery.addListener(this._mobileQueryListener);
@@ -40,6 +43,7 @@ export class ShellComponent implements OnInit, OnDestroy, AfterViewInit {
   public ngOnInit(): void {
     this.isSidenavOpened = true;
     this.headerText = 'Learning';
+    this.mobileQuery.addEventListener('change', this.sideNavState);
   }
 
   public ngOnDestroy(): void {
@@ -56,7 +60,14 @@ export class ShellComponent implements OnInit, OnDestroy, AfterViewInit {
   }
 
   public sideNavChange(event: boolean) {
-    this.coreService.setSidenavState(!event);
+    if (this.sideNavMode === 'side') {
+      this.coreService.setSidenavState(!event);
+    }
+  }
+
+  // checking Media Query State Change
+  public sideNavState(event: MediaQueryListEvent) {
+    this.sideNavMode = event.matches ? 'over' : 'side';
   }
 
 }
