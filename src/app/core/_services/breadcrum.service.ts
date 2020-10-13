@@ -85,6 +85,10 @@ export class BreadcrumService {
             {
               name: 'Expenses',
               url: '/responsive/expenses',
+            },
+            {
+              name: 'Medical Dashboard',
+              url: '/responsive/medical-dashboard',
             }
           ],
         }

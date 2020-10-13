@@ -11,10 +11,12 @@
 }
 
 mat-sidenav {
-    min-width: 250px;
+    min-width: 190px;
     border-right: 1px solid #eee;
     box-shadow: 6px 0 6px rgba(0, 0, 0, .1);
 }
+
+
 
 .sidenav-content {
     min-height: calc(100vh - 90px);

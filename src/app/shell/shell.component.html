@@ -4,7 +4,7 @@
 
 
     <mat-sidenav-container>
-        <mat-sidenav class="sidenav" fixedTopGap="64" [opened]="!mobileQuery.matches" [mode]="mobileQuery.matches ? 'over' : 'side'"
+        <mat-sidenav fixedTopGap="64" [opened]="!mobileQuery.matches" [mode]="mobileQuery.matches ? 'over' : 'side'"
         [fixedInViewport]="mobileQuery.matches" #snav (openedChange)="sideNavChange($event)">
             <app-sidenav></app-sidenav>
         </mat-sidenav>
