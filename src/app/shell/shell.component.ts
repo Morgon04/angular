@@ -35,8 +35,7 @@ export class ShellComponent implements OnInit, OnDestroy, AfterViewInit {
 
     this.mobileQuery = this.media.matchMedia('(max-width: 1024px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
-    // tslint:disable-next-line: deprecation
-    this.mobileQuery.addListener(this._mobileQueryListener);
+    this.mobileQuery.addEventListener('change', this.sideNavState);
 
   }
 
@@ -48,7 +47,7 @@ export class ShellComponent implements OnInit, OnDestroy, AfterViewInit {
 
   public ngOnDestroy(): void {
     // tslint:disable-next-line: deprecation
-    this.mobileQuery.removeListener(this._mobileQueryListener);
+    this.mobileQuery.removeEventListener('change', this._mobileQueryListener);
   }
 
   public ngAfterViewInit(): void {

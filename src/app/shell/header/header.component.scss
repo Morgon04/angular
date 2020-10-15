@@ -16,7 +16,7 @@
     color: white;
 }
 
-.login-btn {
+.sign-btn {
     background: transparent;
     border: none;
     color: white;
@@ -25,4 +25,5 @@
     padding: $le-8px $le-16px;
     font-weight: $le-font-weight-600;
     font-size: $le-font-size-15px;
+    margin: 0;
 }

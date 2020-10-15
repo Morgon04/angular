@@ -89,6 +89,10 @@ export class BreadcrumService {
             {
               name: 'Medical Dashboard',
               url: '/responsive/medical-dashboard',
+            },
+            {
+              name: 'Calendar UI',
+              url: '/responsive/calendar-ui',
             }
           ],
         }

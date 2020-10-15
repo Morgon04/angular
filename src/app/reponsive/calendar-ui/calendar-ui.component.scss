@@ -1,0 +1,133 @@
+@import "~src/assets/styles/variables.scss";
+@import "~src/assets/styles/common.scss";
+
+
+p {
+    margin: 0;
+}
+
+.calendar-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    .calendar {
+        width: 330px;
+        background-color: white;
+        min-height: 350px;
+        box-sizing: border-box;
+        display: flex;
+        flex-direction: column;
+        margin-bottom: $le-10px;
+
+        .calendar-heading {
+            padding: $le-16px;
+            display: flex;
+            justify-content: space-between;
+
+            p {
+                font-size: $le-font-size-18px;
+                font-weight: $le-font-weight-800;
+                display: flex;
+                align-items: center;
+            }
+        }
+
+        .calendar-lists,
+        .calendar-days-heading {
+            display: flex;
+            padding: 0 $le-16px $le-16px;
+
+            ul {
+                list-style: none;
+                padding: 0;
+                margin: 0;
+                display: flex;
+                width: 100%;
+
+                li {
+                    display: flex;
+                    width: 100%;
+                    justify-content: center;
+                    color: #8e959f;
+                    font-weight: $le-font-weight-600;
+                }
+            }
+        }
+
+        .calendar-lists {
+            display: flex;
+            flex-direction: column;
+
+            ul {
+                margin: 0.6rem 0;
+
+                li {
+
+                    padding: 0.4rem 0;
+
+                    &.is-active {
+                        &:hover {
+                            background-color: #247ba01f;
+                            border-radius: 15%;
+                            font-weight: bold;
+                            color: black;
+                            cursor: pointer;
+                        }
+                    }
+
+                    &.current-date {
+                        color: #53A3BD;
+                        font-weight: bold;
+                        background-color: #247ba01f;
+                        border-radius: 15%;
+
+                        &:hover {
+                            color: #53A3BD !important;
+                        }
+                    }
+
+                    &.is-disabled {
+                        background-color: #80808047;
+                    }
+
+                    &.is-first-child {
+                        border-top-left-radius: 15%;
+                        border-bottom-left-radius: 15%;
+                    }
+
+                    &.is-last-child {
+                        border-top-right-radius: 15%;
+                        border-bottom-right-radius: 15%;
+                    }
+
+                    &.is-selected {
+                        @extend .selected-date;
+
+                        &:hover {
+                            @extend .selected-date;
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .selected-date-on-calendar {
+            display: flex;
+            align-items: center;
+            font-weight: $le-font-weight-800;
+            justify-content: center;
+            font-size: $le-font-size-16px;
+            margin: $le-10px 0;
+        }
+    }
+}
+
+.selected-date {
+    background-color: #247ba0;
+    color: white;
+    border-radius: 15%;
+    font-weight: normal;
+}

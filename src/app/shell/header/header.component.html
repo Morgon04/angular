@@ -11,7 +11,7 @@
         {{headerText}}
     </a>
     <span class="spacer"></span>
-    <button class="login-btn" (click)="navigateToAccount()">
+    <button class="sign-btn" (click)="navigateToAccount()" *ngIf="!mobileQuery.matches">
         SIGN IN / SIGN UP
     </button>
 </mat-toolbar>

@@ -64,6 +64,10 @@ export class ResponsiveTopicsComponent implements OnInit {
       {
         name: 'Medical Dashboard',
         url: '/responsive/medical-dashboard',
+      },
+      {
+        name: 'Calendar UI',
+        url: '/responsive/calendar-ui'
       }
     ];
   }

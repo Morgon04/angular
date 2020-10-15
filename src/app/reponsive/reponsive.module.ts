@@ -33,25 +33,27 @@ import { AppointmentsListComponent } from './appointments-list/appointments-list
 import { MedicalDashboardComponent } from './medical-dashboard/medical-dashboard.component';
 import { ResponsiveTopicsComponent } from './responsive-topics/responsive-topics.component';
 import { CalendarUiComponent } from './calendar-ui/calendar-ui.component';
+import { TaskBoardComponent } from './task-board/task-board.component';
 
 
 @NgModule({
   declarations: [
+    MsdComponent,
     ListComponent,
-    ResponsiveTopicsComponent,
-    CandidateListComponent,
-    DevelopersComponent,
     DesignComponent,
+    TicketComponent,
     GotCastsComponent,
     CalendarComponent,
-    CoursesListComponent,
-    MsdComponent,
-    AppointmentsListComponent,
-    TicketComponent,
-    TeamMembersComponent,
     ExpensesComponent,
+    DevelopersComponent,
+    CalendarUiComponent,
+    TeamMembersComponent,
+    CoursesListComponent,
+    CandidateListComponent,
+    AppointmentsListComponent,
     MedicalDashboardComponent,
-    CalendarUiComponent
+    ResponsiveTopicsComponent,
+    TaskBoardComponent,
   ],
   imports: [
     CommonModule,

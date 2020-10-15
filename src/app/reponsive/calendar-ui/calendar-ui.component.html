@@ -1,1 +1,42 @@
-<p>calendar-ui works!</p>
+<div class="calendar-container">
+    <div class="calendar mat-elevation-z2">
+        <div class="calendar-heading">
+            <button mat-icon-button (click)="navigateMonth(currentMonth-1)">
+                <mat-icon>
+                    <span class="material-icons">
+                        arrow_left
+                    </span>
+                </mat-icon>
+            </button>
+            <p>{{ monthsName[currentMonth] }} {{ currentYear }}</p>
+            <button mat-icon-button (click)="navigateMonth(currentMonth+1)">
+                <mat-icon>
+                    <span class="material-icons">
+                        arrow_right
+                    </span>
+                </mat-icon>
+            </button>
+        </div>
+
+        <div class="calendar-days-heading">
+            <ul class="days-heading-list">
+                <li class="day" *ngFor="let day of listOfDays">{{ day }}</li>
+            </ul>
+        </div>
+        <p class="selected-date-on-calendar" *ngIf="selectedDate">
+            Date: {{ selectedDate | date }}
+        </p>
+        <div class="calendar-lists">
+            <ul class="days-heading-list" *ngFor="let row of localDate;let rowIdx = index">
+                <li class="day" *ngFor="let col of localDate[rowIdx];let colIdx = index"
+                    [class.current-date]="col.date===currentDate && dateMonth === currentMonth"
+                    [class.is-disabled]="col.isDisabled" [class.is-active]="!col.isDisabled"
+                    [class.is-first-child]="col.isFirstChild" [class.is-last-child]="col.isLastChild"
+                    [class.is-selected]="col.isSelected" (click)="onSelect(col)">
+                    {{ col.date }}
+                </li>
+            </ul>
+        </div>
+        
+    </div>
+</div>

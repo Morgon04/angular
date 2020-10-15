@@ -1,3 +1,4 @@
+import { CalendarUiComponent } from './calendar-ui/calendar-ui.component';
 import { ExpensesComponent } from './expenses/expenses.component';
 // Angular Import
 import { NgModule } from '@angular/core';
@@ -98,6 +99,11 @@ const responsiveRoutes: Routes = [
             path: 'medical-dashboard',
             component: MedicalDashboardComponent,
             data: { title: 'Medical Expenses' },
+          },
+          {
+            path: 'calendar-ui',
+            component: CalendarUiComponent,
+            data: { title: 'Calendar UI' },
           }
         ]
       }
