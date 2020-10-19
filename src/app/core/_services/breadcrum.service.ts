@@ -93,6 +93,10 @@ export class BreadcrumService {
             {
               name: 'Calendar UI',
               url: '/responsive/calendar-ui',
+            },
+            {
+              name: 'Task Board',
+              url: '/responsive/task-board',
             }
           ],
         }

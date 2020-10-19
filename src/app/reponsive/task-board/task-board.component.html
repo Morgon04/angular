@@ -1,1 +1,220 @@
-<p>task-board works!</p>
+<div class="task-board-container">
+    <div class="task-board-header">
+        <button class="btn add-task">
+            <span>
+                Create Task
+            </span>
+            <span class="material-icons">
+                add
+            </span>
+        </button>
+    </div>
+    <div class="task-board-body" cdkDropListGroup>
+        <div class="task-board task-board-backlog" cdkDropList [cdkDropListData]="backlogItems"
+            (cdkDropListDropped)="dropItems($event)">
+            <p class="task-board-title">Backlog</p>
+            <div class="task-board-items" *ngFor="let item of backlogItems" cdkDrag>
+                <div class="task-board-item">
+                    <div class="task-board-border" [class.med-border]="item.priority === 'Med Priority'"
+                        [class.low-border]="item.priority === 'Low Priority'"></div>
+                    <div class="task-board-detail">
+                        <p class="task-board-item-type">
+                            {{ item.type }}
+                        </p>
+                        <p class="task-board-item-priority" [class.med-priority]="item.priority === 'Med Priority'"
+                            [class.low-priority]="item.priority === 'Low Priority'">
+                            {{ item.priority }}
+                        </p>
+                    </div>
+                    <p class="task-board-item-title">
+                        {{ item.name }}
+                    </p>
+
+                    <div class="task-board-item-details">
+                        <div class="task-board-item-detail">
+                            <span>
+                                <span class="material-icons">
+                                    query_builder
+                                </span>
+                                {{ item.totalHours }}
+                            </span>
+                            <span>
+                                <span class="material-icons">
+                                    chat
+                                </span>
+                                {{ item.commentCount }} </span>
+                            <span>
+                                <span class="material-icons">
+                                    attach_file
+                                </span>
+                                {{ item.attachmentCount }}
+                            </span>
+                        </div>
+
+                        <div class="task-board-item-image">
+                            <img src="{{item.profile}}">
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+        </div>
+        
+        <div class="task-board task-board-todo" cdkDropList [cdkDropListData]="todoItems"
+            (cdkDropListDropped)="dropItems($event)">
+            <p class="task-board-title">To do</p>
+            <div class="task-board-items" *ngFor="let item of todoItems" cdkDrag>
+                <div class="task-board-item">
+                    <div class="task-board-border" [class.med-border]="item.priority === 'Med Priority'"
+                        [class.low-border]="item.priority === 'Low Priority'"></div>
+                    <div class="task-board-detail">
+                        <p class="task-board-item-type">
+                            {{ item.type }}
+                        </p>
+                        <p class="task-board-item-priority" [class.med-priority]="item.priority === 'Med Priority'"
+                            [class.low-priority]="item.priority === 'Low Priority'">
+                            {{ item.priority }}
+                        </p>
+                    </div>
+                    <p class="task-board-item-title">
+                        {{ item.name }}
+                    </p>
+
+                    <div class="task-board-item-details">
+                        <div class="task-board-item-detail">
+                            <span>
+                                <span class="material-icons">
+                                    query_builder
+                                </span>
+                                {{ item.totalHours }}
+                            </span>
+                            <span>
+                                <span class="material-icons">
+                                    chat
+                                </span>
+                                {{ item.commentCount }} </span>
+                            <span>
+                                <span class="material-icons">
+                                    attach_file
+                                </span>
+                                {{ item.attachmentCount }}
+                            </span>
+                        </div>
+
+                        <div class="task-board-item-image">
+                            <img src="{{item.profile}}">
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- <span class="vertical-border"></span> -->
+        </div>
+
+        <div class="task-board task-board-inprogress" cdkDropList [cdkDropListData]="inProgessItems"
+            (cdkDropListDropped)="dropItems($event)">
+            <p class="task-board-title">In Progress</p>
+            <div class="task-board-items" *ngFor="let item of inProgessItems" cdkDrag>
+                <div class="task-board-item">
+                    <div class="task-board-border" [class.med-border]="item.priority === 'Med Priority'"
+                        [class.low-border]="item.priority === 'Low Priority'"></div>
+                    <div class="task-board-detail">
+                        <p class="task-board-item-type">
+                            {{ item.type }}
+                        </p>
+                        <p class="task-board-item-priority" [class.med-priority]="item.priority === 'Med Priority'"
+                            [class.low-priority]="item.priority === 'Low Priority'">
+                            {{ item.priority }}
+                        </p>
+                    </div>
+                    <p class="task-board-item-title">
+                        {{ item.name }}
+                    </p>
+
+                    <div class="task-board-item-details">
+                        <div class="task-board-item-detail">
+                            <span>
+                                <span class="material-icons">
+                                    query_builder
+                                </span>
+                                {{ item.totalHours }}
+                            </span>
+                            <span>
+                                <span class="material-icons">
+                                    chat
+                                </span>
+                                {{ item.commentCount }} </span>
+                            <span>
+                                <span class="material-icons">
+                                    attach_file
+                                </span>
+                                {{ item.attachmentCount }}
+                            </span>
+                        </div>
+
+                        <div class="task-board-item-image">
+                            <img src="{{item.profile}}">
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- <span class="vertical-border"></span> -->
+        </div>
+
+        <div class="task-board task-board-completed" cdkDropList
+        [cdkDropListData]="completedItems" (cdkDropListDropped)="dropItems($event)">
+            <p class="task-board-title">Completed</p>
+            <div class="task-board-items" *ngFor="let item of completedItems" cdkDrag>
+                <div class="task-board-item">
+                    <div class="task-board-border" [class.med-border]="item.priority === 'Med Priority'"
+                        [class.low-border]="item.priority === 'Low Priority'"></div>
+                    <div class="task-board-detail">
+                        <p class="task-board-item-type">
+                            {{ item.type }}
+                        </p>
+                        <p class="task-board-item-priority" [class.med-priority]="item.priority === 'Med Priority'"
+                            [class.low-priority]="item.priority === 'Low Priority'">
+                            {{ item.priority }}
+                        </p>
+                    </div>
+                    <p class="task-board-item-title">
+                        {{ item.name }}
+                    </p>
+
+                    <div class="task-board-item-details">
+                        <div class="task-board-item-detail">
+                            <span>
+                                <span class="material-icons">
+                                    query_builder
+                                </span>
+                                {{ item.totalHours }}
+                            </span>
+                            <span>
+                                <span class="material-icons">
+                                    chat
+                                </span>
+                                {{ item.commentCount }} </span>
+                            <span>
+                                <span class="material-icons">
+                                    attach_file
+                                </span>
+                                {{ item.attachmentCount }}
+                            </span>
+                        </div>
+
+                        <div class="task-board-item-image">
+                            <img src="{{item.profile}}">
+                        </div>
+                    </div>
+
+
+                </div>
+            </div>
+            <!-- <span class="vertical-border"></span> -->
+        </div>
+    </div>
+</div>

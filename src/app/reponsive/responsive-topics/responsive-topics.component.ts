@@ -68,6 +68,10 @@ export class ResponsiveTopicsComponent implements OnInit {
       {
         name: 'Calendar UI',
         url: '/responsive/calendar-ui'
+      },
+      {
+        name: 'Task Board',
+        url: '/responsive/task-board'
       }
     ];
   }

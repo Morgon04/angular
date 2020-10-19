@@ -38,13 +38,14 @@ import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
     // Shared Module
     SharedModule,
 
-    AppRoutingModule, // to be last in the import,
-
     // Account Module
     AuthenticationModule,
+
+    AppRoutingModule, // to be last in the import,
+
   ],
   providers: [
-    {provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: {floatLabel: 'always'}}
+    { provide: MAT_FORM_FIELD_DEFAULT_OPTIONS, useValue: { floatLabel: 'always' } }
   ],
   bootstrap: [AppComponent]
 })

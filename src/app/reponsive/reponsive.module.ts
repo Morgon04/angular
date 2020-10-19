@@ -10,6 +10,7 @@ import { MatIconModule } from '@angular/material/icon';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatButtonModule } from '@angular/material/button';
+import { DragDropModule } from '@angular/cdk/drag-drop';
 
 // Shared Module Import
 import { SharedModule } from '../shared/shared.module';
@@ -25,15 +26,15 @@ import { DesignComponent } from './design/design.component';
 import { CalendarComponent } from './calendar/calendar.component';
 import { ExpensesComponent } from './expenses/expenses.component';
 import { GotCastsComponent } from './got-casts/got-casts.component';
+import { TaskBoardComponent } from './task-board/task-board.component';
 import { DevelopersComponent } from './developers/developers.component';
+import { CalendarUiComponent } from './calendar-ui/calendar-ui.component';
 import { CoursesListComponent } from './courses-list/courses-list.component';
 import { TeamMembersComponent } from './team-members/team-members.component';
 import { CandidateListComponent } from './candidate-list/candidate-list.component';
 import { AppointmentsListComponent } from './appointments-list/appointments-list.component';
 import { MedicalDashboardComponent } from './medical-dashboard/medical-dashboard.component';
 import { ResponsiveTopicsComponent } from './responsive-topics/responsive-topics.component';
-import { CalendarUiComponent } from './calendar-ui/calendar-ui.component';
-import { TaskBoardComponent } from './task-board/task-board.component';
 
 
 @NgModule({
@@ -42,9 +43,10 @@ import { TaskBoardComponent } from './task-board/task-board.component';
     ListComponent,
     DesignComponent,
     TicketComponent,
-    GotCastsComponent,
     CalendarComponent,
     ExpensesComponent,
+    GotCastsComponent,
+    TaskBoardComponent,
     DevelopersComponent,
     CalendarUiComponent,
     TeamMembersComponent,
@@ -53,7 +55,6 @@ import { TaskBoardComponent } from './task-board/task-board.component';
     AppointmentsListComponent,
     MedicalDashboardComponent,
     ResponsiveTopicsComponent,
-    TaskBoardComponent,
   ],
   imports: [
     CommonModule,
@@ -63,6 +64,7 @@ import { TaskBoardComponent } from './task-board/task-board.component';
     MatProgressSpinnerModule,
     MatProgressBarModule,
     MatButtonModule,
+    DragDropModule,
 
     // Shared Module
     SharedModule,

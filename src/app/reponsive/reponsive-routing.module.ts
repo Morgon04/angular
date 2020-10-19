@@ -1,3 +1,4 @@
+import { TaskBoardComponent } from './task-board/task-board.component';
 import { CalendarUiComponent } from './calendar-ui/calendar-ui.component';
 import { ExpensesComponent } from './expenses/expenses.component';
 // Angular Import
@@ -104,6 +105,11 @@ const responsiveRoutes: Routes = [
             path: 'calendar-ui',
             component: CalendarUiComponent,
             data: { title: 'Calendar UI' },
+          },
+          {
+            path: 'task-board',
+            component: TaskBoardComponent,
+            data: { title: 'Task Board' },
           }
         ]
       }
