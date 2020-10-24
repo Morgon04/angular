@@ -1,0 +1,287 @@
+@import "~src/assets/styles/variables.scss";
+@import "~src/assets/styles/common.scss";
+
+p {
+    margin: 0;
+}
+
+.hr-dashboard-container {
+    display: flex;
+    width: 100%;
+
+    .hr-dashboard-welcome-card {
+        display: flex;
+        flex-direction: column;
+        background-color: #f9f9f9;
+        min-height: calc(100vh - 90px);
+        width: 30%;
+        box-sizing: border-box;
+        padding: 32px 32px $le-20px;
+        box-shadow: 0 0px 10px rgba(0, 0, 0, 0.17);
+
+        .hr-dashboard-welcome-card-title {
+            font-size: 32px;
+            font-weight: $le-font-weight-800;
+            line-height: 36px;
+            margin-bottom: $le-20px;
+        }
+
+        .hr-dashboard-welcome-card-task {
+            display: flex;
+            position: relative;
+            margin-top: $le-48px;
+            justify-content: space-evenly;
+
+            .hr-dashboard-welcome-card-task-to-do {
+
+                .hr-dashboard-welcome-card-task-circle {
+                    width: 120px;
+                    height: 120px;
+                    overflow: hidden;
+                    border-color: rgba(163, 151, 184, 0.12);
+                    border-radius: 50%;
+                    border-style: solid;
+                    border-width: 15px;
+                    position: absolute;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+
+                    .percentage {
+                        color: #2d2f3a;
+                        font-size: $le-font-size-20px;
+                        font-weight: $le-font-weight-600;
+                    }
+
+                    .divider {
+                        color: #aeb4c1
+                    }
+                }
+            }
+
+            .hr-dashboard-welcome-card-task-to-do,
+            .hr-dashboard-welcome-card-task-cases {
+                .title {
+                    margin-bottom: $le-10px;
+                    font-size: $le-font-size-16px;
+                }
+            }
+
+            .hr-dashboard-welcome-card-tast-cases {
+                display: flex;
+                flex-direction: column;
+
+                .cases-heading {
+                    display: flex;
+                    justify-content: space-evenly;
+                    margin-top: $le-20px;
+
+                    .cases-heading-number {
+                        display: flex;
+                        flex-direction: column;
+                        margin-right: $le-16px;
+
+                        p {
+                            font-size: 36px;
+                            margin-bottom: $le-24px;
+                            text-align: end;
+                            line-height: 32px;
+                        }
+                    }
+
+                    .cases-heading-title {
+                        display: flex;
+                        flex-direction: column;
+
+                        p {
+                            margin-bottom: 27px;
+                            color: #777883;
+                            width: 60px;
+                            text-align: inherit;
+                            font-size: 12px;
+                            text-align: inherit;
+                            line-height: 1.3;
+                        }
+                    }
+                }
+            }
+
+
+        }
+
+        .dashboard-btn {
+            display: flex;
+            margin-top: $le-10px;
+            justify-content: center;
+
+            .btn {
+                padding: $le-12px;
+                background-color: white;
+                color: black;
+                border-radius: $le-4px;
+                box-shadow: 0 0px 10px rgba(0, 0, 0, 0.17);
+                font-weight: $le-font-weight-600;
+                font-size: 13px;
+            }
+        }
+
+
+    }
+
+    .hr-dashboard-content {
+        display: flex;
+        flex-direction: column;
+        width: 70%;
+        padding: $le-16px $le-32px;
+        box-sizing: border-box;
+
+        .dashboard-content-btn {
+            display: flex;
+            margin-top: $le-10px;
+            justify-content: flex-end;
+
+            .btn {
+                padding: $le-12px 32px;
+                background-color: #1f95f2;
+                color: white;
+                border-radius: $le-4px;
+                box-shadow: 0 0px 10px rgba(0, 0, 0, 0.17);
+                font-size: $le-font-size-12px;
+            }
+
+
+        }
+
+        .dashboard-content-nav {
+            display: flex;
+            margin-bottom: $le-20px;
+
+            ul {
+                margin: 0;
+                padding: 0;
+                display: flex;
+                list-style: none;
+
+                li {
+                    margin-right: $le-24px;
+                    font-weight: $le-font-weight-600;
+                    cursor: pointer;
+                    position: relative;
+
+                    &:hover,
+                    &:first-child {
+                        color: #1590f2;
+                    }
+
+                    &:last-child {
+                        margin-right: 0;
+                    }
+
+                    .active {
+                        position: absolute;
+                        width: 100%;
+                        bottom: -7px;
+                        height: 3px;
+                        left: 0;
+                        background-color: #1590f2;
+                    }
+                }
+            }
+        }
+
+        .dashboard-content-heading {
+            display: flex;
+            justify-content: space-between;
+
+            p {
+                font-size: $le-font-size-12px;
+                font-weight: $le-font-weight-600;
+
+                &.redirect {
+                    cursor: pointer;
+
+                    &:hover {
+                        color: #1e94f3;
+                    }
+                }
+
+                .material-icons {
+                    vertical-align: top;
+                }
+            }
+        }
+
+        .dashboard-content-lists {
+            display: flex;
+            flex-wrap: wrap;
+            margin-top: $le-12px;
+
+            .content-list {
+                display: flex;
+                flex-direction: column;
+                box-sizing: border-box;
+                box-shadow: 0 0px 10px rgba(0, 0, 0, 0.1);
+                border-radius: $le-8px;
+                width: calc(100% / #{$le-four-columns} - #{$le-24px});
+                margin: 0 $le-12px $le-16px;
+                padding: $le-16px $le-12px;
+                min-height: 160px;
+                background-color: white;
+
+                .content-list-heading {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .heading-date,
+                    .heading-icon {
+                        display: flex;
+
+                        .material-icons {
+                            vertical-align: top;
+                        }
+                    }
+
+                    .heading-icon {
+                        .material-icons {
+                            color: #4bacf5;
+
+                            &.green {
+
+                                color: #6cbb1e;
+                            }
+                        }
+                    }
+
+                    .heading-date {
+                        .material-icons {
+                            color: #d0d1d5;
+                        }
+                    }
+                }
+            }
+
+            .content-list-body {
+                display: flex;
+                flex-direction: column;
+                height: 100%;
+
+                .title {
+                    font-size: $le-font-size-16px;
+                    font-weight: $le-font-weight-600;
+                    margin-bottom: $le-5px;
+                    display: flex;
+                    height: 100%;
+                    justify-content: flex-start;
+                    align-items: flex-end;
+                }
+
+                .small-title {
+                    color: #1e94f3;
+                    font-size: $le-font-size-12px;
+                    font-weight: $le-font-weight-600;
+                }
+            }
+        }
+    }
+}

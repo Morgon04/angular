@@ -24,6 +24,10 @@ export class CoreService {
   public sidenavOpenOrClose = new BehaviorSubject<boolean>(false);
   public sidenavOpenOrCloseObservable = this.sidenavOpenOrClose.asObservable();
 
+  public toggleSidenav = new BehaviorSubject<boolean>(true);
+  public toggleSidenavObservable = this.toggleSidenav.asObservable();
+
+
   constructor() { }
 
   public errorHandler(errorResponse: HttpErrorResponse) {
@@ -47,5 +51,9 @@ export class CoreService {
 
   public setSidenavState(value: boolean): void {
     this.sidenavOpenOrClose.next(value);
+  }
+
+  public toggleSidenavState(value: boolean): void {
+    this.toggleSidenav.next(value);
   }
 }

@@ -72,6 +72,10 @@ export class ResponsiveTopicsComponent implements OnInit {
       {
         name: 'Task Board',
         url: '/responsive/task-board'
+      },
+      {
+        name: 'HR Dashboard',
+        url: '/responsive/hr-dashboard'
       }
     ];
   }

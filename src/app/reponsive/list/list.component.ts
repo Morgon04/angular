@@ -1,4 +1,8 @@
+// Angular Import
 import { Component, OnInit } from '@angular/core';
+
+// Core Service Import
+import { CoreService } from 'src/app/core/core.service';
 
 @Component({
   selector: 'app-list',
@@ -7,9 +11,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ListComponent implements OnInit {
 
-  constructor() { }
+  public showHeading = true;
+  constructor(
+    private coreService: CoreService
+  ) { }
 
-  ngOnInit(): void {
+  public ngOnInit(): void {
+    this.coreService.toggleSidenavObservable
+      .subscribe((response: boolean) => {
+        this.showHeading = response;
+      });
   }
 
 }

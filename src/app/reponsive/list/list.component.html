@@ -1,5 +1,5 @@
 <div class="landing-page">
-    <app-heading [headerText]="['Responsive Design']"></app-heading>
+    <app-heading [headerText]="['Responsive Design']" *ngIf="showHeading"></app-heading>
     <div class="container">
         <router-outlet></router-outlet>
     </div>

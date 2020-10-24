@@ -8,7 +8,6 @@ import { CdkDragDrop, moveItemInArray, transferArrayItem } from '@angular/cdk/dr
 import { Taskboard } from '../_model/taskboard';
 
 
-
 @Component({
   selector: 'app-task-board',
   templateUrl: './task-board.component.html',

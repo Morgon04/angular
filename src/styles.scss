@@ -105,7 +105,7 @@ body {
 
 .btn {
     outline: none;
-    border: none;    
+    border: none;
     cursor: pointer;
 }
 
@@ -125,4 +125,27 @@ body {
 
 .no-margin {
     margin: 0 !important;
+}
+
+.hr-dashboard-welcome-card-task .mat-progress-spinner circle {
+    stroke: #2095f3 !important;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.bold {
+    font-weight: $le-font-weight-600;
+}
+
+.material-icons {
+
+    &.md-18 {
+        font-size: 18px;
+    }
+
+    &.md-20 {
+        font-size: 20px;
+    }
 }

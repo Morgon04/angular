@@ -6,6 +6,7 @@ import { Component, OnInit, Output, EventEmitter, ChangeDetectorRef } from '@ang
 
 // Service Import
 import { ShellService } from './../shell.service';
+import { CoreService } from 'src/app/core/core.service';
 
 @Component({
   selector: 'app-header',
@@ -28,6 +29,7 @@ export class HeaderComponent implements OnInit, AfterViewInit, OnDestroy {
     private router: Router,
     private changeDetectorRef: ChangeDetectorRef,
     private media: MediaMatcher,
+    private coreService: CoreService
   ) {
     this.mobileQuery = this.media.matchMedia('(max-width: 767px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
@@ -39,6 +41,12 @@ export class HeaderComponent implements OnInit, AfterViewInit, OnDestroy {
         if (text) {
           this.headerText = text;
         }
+      });
+
+    this.coreService.toggleSidenavObservable
+      .subscribe((response: boolean) => {
+        this.eventToggle.emit();
+        console.log(response);
       });
   }
 

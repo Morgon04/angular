@@ -35,6 +35,8 @@ import { CandidateListComponent } from './candidate-list/candidate-list.componen
 import { AppointmentsListComponent } from './appointments-list/appointments-list.component';
 import { MedicalDashboardComponent } from './medical-dashboard/medical-dashboard.component';
 import { ResponsiveTopicsComponent } from './responsive-topics/responsive-topics.component';
+import { HrDashboardComponent } from './hr-dashboard/hr-dashboard.component';
+import { ProjectsComponent } from './projects/projects.component';
 
 
 @NgModule({
@@ -55,6 +57,8 @@ import { ResponsiveTopicsComponent } from './responsive-topics/responsive-topics
     AppointmentsListComponent,
     MedicalDashboardComponent,
     ResponsiveTopicsComponent,
+    HrDashboardComponent,
+    ProjectsComponent,
   ],
   imports: [
     CommonModule,

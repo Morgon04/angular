@@ -1,0 +1,108 @@
+<div class="hr-dashboard-container">
+    <div class="hr-dashboard-welcome-card">
+        <p class="hr-dashboard-welcome-card-title">Welcome back to your Dashboard Murugan</p>
+
+        <h4>
+            We recommended you to complete
+            <b><u>Certificates of Employement</u></b>
+            and upload <b><u>New Registration</u></b> to
+            system from last week.
+        </h4>
+
+        <div class="hr-dashboard-welcome-card-task">
+
+            <div class="hr-dashboard-welcome-card-task-to-do">
+                <p class="text-center bold title">Tasks to do</p>
+                <div class="hr-dashboard-welcome-card-task-circle">
+                    <p class="percentage">15%</p>
+                    <p class="divider">1/18</p>
+                </div>
+                <mat-progress-spinner color="#54957f" [diameter]="spinnerDiameter" [value]="percentage">
+                </mat-progress-spinner>
+            </div>
+
+            <div class="hr-dashboard-welcome-card-tast-cases">
+                <p class="text-center bold title">Cases</p>
+                <div class="cases-heading">
+                    <div class="cases-heading-number">
+                        <p class="bold">12</p>
+                        <p class="bold">3</p>
+                        <p class="bold">3</p>
+                    </div>
+                    <div class="cases-heading-title">
+                        <p class="">
+                            Open
+                            Documents
+                        </p>
+                        <p class="">
+                            New
+                            tickets
+                        </p>
+                        <p class="">
+                            New
+                            Employees
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+        <div class="dashboard-btn">
+            <button class="btn">SEE FULL REPORTS</button>
+        </div>
+    </div>
+
+    <div class="hr-dashboard-content">
+        <div class="dashboard-content-btn">
+            <button class="btn">Start new case</button>
+        </div>
+
+        <div class="dashboard-content-nav">
+            <ul>
+                <li (mouseover)="changeState(nav, 'over')" (mouseout)="changeState(nav, 'out')"
+                    *ngFor="let nav of navList">
+                    {{nav.name}}
+                    <span [class.active]="nav.active"></span>
+                </li>
+            </ul>
+        </div>
+
+        <div class="dashboard-content-heading">
+            <p>Open Documents</p>
+            <p (click)="redirectTo()" class="redirect">
+
+
+                All Documents
+                <span class="material-icons md-18">
+                    arrow_drop_down
+                </span>
+            </p>
+        </div>
+
+        <div class="dashboard-content-lists">
+            <div class="content-list" *ngFor="let dashboard of dashboardList">
+                <div class="content-list-heading">
+                    <p class="heading-date">
+                        <mat-icon>
+                            <span class="material-icons md-18">
+                                calendar_today
+                            </span>
+                        </mat-icon>
+                        {{dashboard.date}}
+                    </p>
+                    <p class="heading-icon">
+                        <mat-icon>
+                            <span class="material-icons md-18" [class.green]="dashboard.icon === 'verified'">
+                                {{dashboard.icon}}
+                            </span>
+                        </mat-icon>
+                    </p>
+                </div>
+                <div class="content-list-body">
+                    <p class="title">{{dashboard.name}}</p>
+                    <p class="small-title">{{dashboard.desc}}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
