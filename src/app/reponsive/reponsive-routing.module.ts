@@ -1,3 +1,4 @@
+import { ProjectsComponent } from './projects/projects.component';
 import { HrDashboardComponent } from './hr-dashboard/hr-dashboard.component';
 import { TaskBoardComponent } from './task-board/task-board.component';
 import { CalendarUiComponent } from './calendar-ui/calendar-ui.component';
@@ -116,6 +117,11 @@ const responsiveRoutes: Routes = [
             path: 'hr-dashboard',
             component: HrDashboardComponent,
             data: { title: 'Task Board' },
+          },
+          {
+            path: 'projects',
+            component: ProjectsComponent,
+            data: { title: 'Projects Dashboard' },
           }
         ]
       }
