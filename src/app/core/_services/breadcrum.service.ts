@@ -101,6 +101,10 @@ export class BreadcrumService {
             {
               name: 'HR Dashboard',
               url: '/responsive/hr-dashboard'
+            },
+            {
+              name: 'Payments',
+              url: '/responsive/payments'
             }
           ],
         }

@@ -1,8 +1,3 @@
-import { ProjectsComponent } from './projects/projects.component';
-import { HrDashboardComponent } from './hr-dashboard/hr-dashboard.component';
-import { TaskBoardComponent } from './task-board/task-board.component';
-import { CalendarUiComponent } from './calendar-ui/calendar-ui.component';
-import { ExpensesComponent } from './expenses/expenses.component';
 // Angular Import
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -15,11 +10,17 @@ import { MsdComponent } from './msd/msd.component';
 import { ListComponent } from './list/list.component';
 import { DesignComponent } from './design/design.component';
 import { TicketComponent } from './ticket/ticket.component';
+import { ExpensesComponent } from './expenses/expenses.component';
 import { CalendarComponent } from './calendar/calendar.component';
+import { ProjectsComponent } from './projects/projects.component';
 import { GotCastsComponent } from './got-casts/got-casts.component';
+import { TaskBoardComponent } from './task-board/task-board.component';
 import { DevelopersComponent } from './developers/developers.component';
+import { CalendarUiComponent } from './calendar-ui/calendar-ui.component';
+import { HrDashboardComponent } from './hr-dashboard/hr-dashboard.component';
 import { CoursesListComponent } from './courses-list/courses-list.component';
 import { TeamMembersComponent } from './team-members/team-members.component';
+import { PaymentsPageComponent } from './payments-page/payments-page.component';
 import { CandidateListComponent } from './candidate-list/candidate-list.component';
 import { ResponsiveTopicsComponent } from './responsive-topics/responsive-topics.component';
 import { AppointmentsListComponent } from './appointments-list/appointments-list.component';
@@ -122,6 +123,11 @@ const responsiveRoutes: Routes = [
             path: 'projects',
             component: ProjectsComponent,
             data: { title: 'Projects Dashboard' },
+          },
+          {
+            path: 'payments',
+            component: PaymentsPageComponent,
+            data: { title: 'Payments Dashboard' },
           }
         ]
       }

@@ -80,7 +80,11 @@ export class ResponsiveTopicsComponent implements OnInit {
       {
         name: 'Projects Dashboard',
         url: '/responsive/projects'
-      }
+      },
+      {
+        name: 'Payments',
+        url: '/responsive/payments'
+      },
     ];
   }
 
