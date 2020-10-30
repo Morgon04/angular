@@ -29,7 +29,7 @@
         <div class="calendar-lists">
             <ul class="days-heading-list" *ngFor="let row of localDate;let rowIdx = index">
                 <li class="day" *ngFor="let col of localDate[rowIdx];let colIdx = index"
-                    [class.current-date]="col.date===currentDate && dateMonth === currentMonth"
+                    [class.current-date]="col.date===currentDate && dateMonth === currentMonth && !col.isDisabled"
                     [class.is-disabled]="col.isDisabled" [class.is-active]="!col.isDisabled"
                     [class.is-first-child]="col.isFirstChild" [class.is-last-child]="col.isLastChild"
                     [class.is-selected]="col.isSelected" (click)="onSelect(col)">

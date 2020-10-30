@@ -104,3 +104,12 @@
     }
 
 }
+
+@media (min-width:1919px) {
+    .courses {
+        .course {
+            width: calc(100% / #{$le-four-columns} - #{$le-20px});
+        }
+    }
+
+}

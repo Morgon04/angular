@@ -16,7 +16,7 @@
 
 .responsive-topics-list {
     width: 100%;
-    padding: 12px 0;
+    padding: 12px;
     font-size: 16px;
     display: flex;
     justify-content: center;
@@ -24,6 +24,7 @@
     margin-bottom: 10px;
     background-color: white;
     border-radius: 4px;
+    box-sizing: border-box;
 }
 
 @media only screen and (min-width: 640px) {
@@ -45,7 +46,6 @@
 
     .responsive-topics-list {
         max-width: 17.1%;
-        margin: 0 15px 12px;
     }
 }
 
@@ -58,8 +58,7 @@
 @media only screen and (min-width: 1920px) {
 
     .responsive-topics-list {
-        max-width: 17.72%;
-        margin: 0 15px 12px;
+        width: calc(100% / 5 - #{$le-24px});
     }
 }
 
