@@ -7,10 +7,12 @@ import { ReponsiveRoutingModule } from './reponsive-routing.module';
 
 // Angular Material Import
 import { MatIconModule } from '@angular/material/icon';
-import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-import { MatProgressBarModule } from '@angular/material/progress-bar';
-import { MatButtonModule } from '@angular/material/button';
 import { DragDropModule } from '@angular/cdk/drag-drop';
+import { MatSelectModule } from '@angular/material/select';
+import { MatButtonModule } from '@angular/material/button';
+import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatProgressBarModule } from '@angular/material/progress-bar';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 
 // Shared Module Import
 import { SharedModule } from '../shared/shared.module';
@@ -67,10 +69,12 @@ import { ResponsiveTopicsComponent } from './responsive-topics/responsive-topics
 
     // Angular Material
     MatIconModule,
-    MatProgressSpinnerModule,
-    MatProgressBarModule,
-    MatButtonModule,
     DragDropModule,
+    MatSelectModule,
+    MatButtonModule,
+    MatCheckboxModule,
+    MatProgressBarModule,
+    MatProgressSpinnerModule,
 
     // Shared Module
     SharedModule,

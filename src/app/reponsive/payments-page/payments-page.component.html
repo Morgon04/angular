@@ -30,6 +30,8 @@
     </div>
 
     <div class="payments-body">
+
+
         <div class="payments-list-container">
             <div class="payments-lists">
                 <div class="payments-list" *ngFor="let list of paymentsHistory;let idx=index" [class.last]="idx===2">
@@ -95,6 +97,92 @@
                     </span>
                     Statment
                 </p>
+            </div>
+
+        </div>
+        <div class="payments-table-container">
+            <div class="payments-table-nav">
+                <div class="payments-table-navbar">
+                    <p class="payments-table-navbar-heading">Payments</p>
+                    <div class="payments-table-navbar-items">
+                        <ul class="navbar-items-ul">
+                            <li *ngFor="let navs of paymentNav" (mouseover)="changeState(navs, 'over')"
+                                (mouseout)="changeState(navs, 'out')">
+                                {{navs.name}}
+                                <span [class.bottom-border]="navs.active"></span>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+                <p class="payments-table-nav-last">
+                    <span class="material-icons md-18">
+                        insert_chart_outlined
+                    </span>
+                    Analytics
+                    <span class="material-icons md-18">
+                        navigate_next
+                    </span>
+                </p>
+            </div>
+            <div class="payments-table-filter">
+                <div class="date-filter">
+                    <div class="date-filters">
+                        <label>
+                            <span class="material-icons md-16">
+                                calendar_today
+                            </span>
+                            Date
+                        </label>
+                        <p>
+                            Last Week
+                            <span class="material-icons">
+                                arrow_drop_down
+                            </span>
+                        </p>
+
+                        <label class="second-lbl">
+                            <span class="material-icons md-16">
+                                calendar_today
+                            </span>
+                            TYPE
+                        </label>
+                        <p>
+                            All
+                            <span class="material-icons">
+                                arrow_drop_down
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                <div class="search-box">
+                    <input type="text" class="search-box-input" placeholder="Search">
+                </div>
+            </div>
+            <div class="payments-table">
+                <table class="table">
+                    <tr class="list-th">
+                        <th>
+                            <mat-checkbox></mat-checkbox>
+                        </th>
+                        <th>ID</th>
+                        <th>Date</th>
+                        <th>Counterparty</th>
+                        <th>Payment Details</th>
+                        <th>Amount</th>
+                        <th>Status</th>
+                    </tr>
+                    <tr *ngFor="let list of paymentsList" class="list-td">
+                        <td>
+                            <mat-checkbox></mat-checkbox>
+                        </td>
+                        <td>{{list.id}}</td>
+                        <td>{{list.date}}</td>
+                        <td>{{list.medium}}</td>
+                        <td>{{list.name}}</td>
+                        <td>{{list.amount}}</td>
+                        <td>{{list.status}}</td>
+                    </tr>
+                </table>
             </div>
         </div>
     </div>

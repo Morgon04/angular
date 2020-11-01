@@ -11,6 +11,11 @@ import { CoreService } from 'src/app/core/core.service';
 export class PaymentsPageComponent implements OnInit, OnDestroy {
 
   public paymentsHistory: any[] = [];
+
+  public paymentNav: any[] = [];
+
+  public paymentsList: any[] = [];
+
   constructor(
     private coreService: CoreService
   ) { }
@@ -21,11 +26,42 @@ export class PaymentsPageComponent implements OnInit, OnDestroy {
 
     // Initialize Payment List
     this.initializePaymentList();
+
+    this.paymentNav = [
+      {
+        name: 'All',
+        active: true
+      },
+      {
+        name: 'Draft',
+        active: false
+      },
+      {
+        name: 'Pending',
+        active: false
+      },
+      {
+        name: 'Paid',
+        active: false
+      }
+    ];
+
+    // Initialize Payment table list
+    this.initializePaymentTableList();
   }
 
   public ngOnDestroy(): void {
     // Opening the sidenav
     this.coreService.toggleSidenavState(false);
+  }
+
+  public changeState(item: any, state: string) {
+    if (item.name !== 'All') {
+      item.active = state === 'over' ? true : false;
+      return;
+    }
+    item.active = true;
+    return;
   }
 
   public initializePaymentList(): void {
@@ -44,6 +80,59 @@ export class PaymentsPageComponent implements OnInit, OnDestroy {
       amt: '$20,080.00',
       desc: 'BE145...78'
     }
+    ];
+  }
+
+  public initializePaymentTableList(): void {
+    this.paymentsList = [
+      {
+        name: 'Online Purchase at Amazon.com',
+        status: 'Draft',
+        amount: '$420.00',
+        medium: 'Amazon',
+        date: '10 Nov 2019',
+        id: '#127'
+      },
+      {
+        name: 'Payment for Delivery',
+        status: 'Pending',
+        amount: '$20.00',
+        medium: 'VideoSmart',
+        date: '04 Nov 2019',
+        id: '#128'
+      },
+      {
+        name: 'Online Purchase at eBay.com',
+        status: 'Paid',
+        amount: '$2690.00',
+        medium: 'eBay',
+        date: '12 Oct 2019',
+        id: '#129'
+      },
+      {
+        name: 'Salary Payment',
+        status: 'Pending',
+        amount: '$7209.00',
+        medium: 'Office Network',
+        date: '10 Oct 2019',
+        id: '#130'
+      },
+      {
+        name: 'Payment Service',
+        status: 'Paid',
+        amount: '$50.00',
+        medium: 'Car repair service',
+        date: '09 Oct 2019',
+        id: '#127'
+      },
+      {
+        name: 'Payment for Mobile Phone',
+        status: 'Paid',
+        amount: '$30.00',
+        medium: 'Vodafone',
+        date: '09 Oct 2019',
+        id: '#127'
+      }
     ];
   }
 
