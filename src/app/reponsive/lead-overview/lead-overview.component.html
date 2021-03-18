@@ -1,0 +1,46 @@
+<div class="lead-overview">
+    <div class="lead-overview-sidecontainer">
+        <div class="sidecontainer-header">
+            <p class="signed">Signed</p>
+            <div class="sidecontainer-header-icons">
+                <div>
+                    <span class="material-icons md-20">
+                        folder_open
+                    </span>
+                </div>
+                <div>
+                    <span class="material-icons md-20">
+                        more_horiz
+                    </span>
+                </div>
+            </div>
+        </div>
+        <div class="sidecontainer-heading">
+            <p>Murugan Sakthivel</p>
+        </div>
+
+        <div class="sidecontainer-icon-list">
+            <button mat-mini-fab *ngFor="let icon of sideContainerIconList">
+                <span class="material-icons md-22">
+                    {{ icon }}
+                </span>
+            </button>
+        </div>
+
+        <div class="sidecontainer-follow-up">
+            <p class="sidecontainer-follow-up-text">
+                2 / 5 <span>Followups</span>
+            </p>
+
+            <mat-progress-bar mode="determinate" value="50" class="follow-up-bar"></mat-progress-bar>
+        </div>
+
+        <div class="followup-list">
+            <div class="followup-list-item" *ngFor="let follow of followupList">
+                <div></div>
+                <div class="followup-list-item-details"></div>
+                <div></div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -105,6 +105,10 @@ export class BreadcrumService {
             {
               name: 'Payments',
               url: '/responsive/payments'
+            },
+            {
+              name: 'Travel',
+              url: '/responsive/travel-dashboard'
             }
           ],
         }

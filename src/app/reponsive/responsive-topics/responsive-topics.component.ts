@@ -85,6 +85,18 @@ export class ResponsiveTopicsComponent implements OnInit {
         name: 'Payments',
         url: '/responsive/payments'
       },
+      {
+        name: 'HTML',
+        url: '/responsive/html'
+      },
+      {
+        name: 'Lead Overview',
+        url: '/responsive/lead-overview'
+      },
+      {
+        name: 'Travel Dashboard',
+        url: '/responsive/travel-dashboard'
+      }
     ];
   }
 

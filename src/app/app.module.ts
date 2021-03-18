@@ -18,10 +18,12 @@ import { AppComponent } from './app.component';
 
 // Angular Material Field Import
 import { MAT_FORM_FIELD_DEFAULT_OPTIONS } from '@angular/material/form-field';
+import { HtmlComponent } from './html/html.component';
 
 @NgModule({
   declarations: [
-    AppComponent, // 1. Component 2. Directives 3. Pipes
+    AppComponent,
+    HtmlComponent, // 1. Component 2. Directives 3. Pipes
   ],
   imports: [ // 1.Angular Module 2.Feature Module
     BrowserModule,

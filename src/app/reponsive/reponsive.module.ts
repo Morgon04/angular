@@ -40,6 +40,9 @@ import { CandidateListComponent } from './candidate-list/candidate-list.componen
 import { AppointmentsListComponent } from './appointments-list/appointments-list.component';
 import { MedicalDashboardComponent } from './medical-dashboard/medical-dashboard.component';
 import { ResponsiveTopicsComponent } from './responsive-topics/responsive-topics.component';
+import { LeadOverviewComponent } from './lead-overview/lead-overview.component';
+import { TravelComponent } from './travel/travel.component';
+import { ProjectManagementToolComponent } from './project-management-tool/project-management-tool.component';
 
 
 @NgModule({
@@ -63,6 +66,9 @@ import { ResponsiveTopicsComponent } from './responsive-topics/responsive-topics
     HrDashboardComponent,
     ProjectsComponent,
     PaymentsPageComponent,
+    LeadOverviewComponent,
+    TravelComponent,
+    ProjectManagementToolComponent,
   ],
   imports: [
     CommonModule,
