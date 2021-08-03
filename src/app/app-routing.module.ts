@@ -1,3 +1,4 @@
+import { TaskManagementDashboardComponent } from './reponsive/task-management-dashboard/task-management-dashboard.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, ExtraOptions } from '@angular/router';
 const routerOptions: ExtraOptions = {
@@ -27,6 +28,11 @@ const appRoutes: Routes = [
   {
     path: 'responsive',
     loadChildren: () => import('./reponsive/reponsive.module').then(m => m.ReponsiveModule)
+  },
+
+  {
+    path: 'task-management',
+    component: TaskManagementDashboardComponent
   },
   { path: '**', redirectTo: '/dashboard', pathMatch: 'full' },
 ];

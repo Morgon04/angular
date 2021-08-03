@@ -33,6 +33,10 @@
     @extend .justify-content-center;
 }
 
+.display-flex-align-item-center {
+    @extend .display-flex;
+    @extend .align-items-center;
+}
 
 .display-flex-row {
     @extend .display-flex;

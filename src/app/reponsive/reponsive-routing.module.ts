@@ -1,3 +1,4 @@
+import { ProjectManagementToolComponent } from './project-management-tool/project-management-tool.component';
 import { HtmlComponent } from './../html/html.component';
 // Angular Import
 import { NgModule } from '@angular/core';
@@ -146,7 +147,11 @@ const responsiveRoutes: Routes = [
             path: 'travel-dashboard',
             component: TravelComponent,
             data: { title: 'Travel Dashboard' },
-            
+          },
+          {
+            path: 'project-management',
+            component: ProjectManagementToolComponent,
+            data: { title: 'Project Management'}
           }
         ]
       }

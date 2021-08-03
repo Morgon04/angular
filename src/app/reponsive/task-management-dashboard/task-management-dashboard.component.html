@@ -1,0 +1,206 @@
+<div class="task-management-board" [class.light]="isLightTheme" [class.dark]="!isLightTheme">
+
+
+    <mat-sidenav-container>
+        <mat-sidenav [opened]="!mobileQuery.matches" [mode]="mobileQuery.matches ? 'over' : 'side'"
+            [fixedInViewport]="mobileQuery.matches" #snav (openedChange)="sideNavChange($event)" class="" [class.light]="isLightTheme" [class.dark]="!isLightTheme">
+            <div class="loogo">
+                <span class="material-icons md-32">
+                    polymer
+                </span>
+            </div>
+            <div class="lists">
+                <div class="list" *ngFor="let item of sidenavList" [class.is-active]=item.isActive>
+                    <span class="material-icons">
+                        {{ item.icon }}
+                    </span>
+
+                    <h3>{{ item.name | uppercase }}</h3>
+                </div>
+            </div>
+        </mat-sidenav>
+
+        <mat-sidenav-content [class.light]="isLightTheme" [class.dark]="!isLightTheme">
+            <div class="header">
+                <mat-toolbar [class.light]="isLightTheme" [class.dark]="!isLightTheme">
+                    <div class="search">
+                        <span class="material-icons md-16">
+                            search
+                        </span>
+                        <input type="text" placeholder="Search">
+                    </div>
+                    <div class="profile">
+
+                        <span class="light-text" [class.bold]="isLightTheme">Light</span>
+                        <mat-slide-toggle (change)="darkTheme($event)"></mat-slide-toggle>
+                        <span class="dark-text" [class.bold]="!isLightTheme">Dark</span>
+                        <span class="material-icons">
+                            notifications_none
+                        </span>
+
+                        <img src="../../../assets/images/Mine.jpeg" alt="">
+                    </div>
+                </mat-toolbar>
+            </div>
+            <div class="taskboard-sidenav-content" [class.light]="isLightTheme" [class.dark]="!isLightTheme">
+                <div class="tasks">
+                    <div class="task" *ngFor="let item of taskItems">
+                        <div class="task-header">
+                            <div class="task-header-details">
+                                <img src="{{item.icon}}" alt="loading...">
+                                <div class="task-header-details-text">
+                                    <h2>{{ item.title }}</h2>
+                                    <h3>{{ item.subTitle }}</h3>
+                                </div>
+                            </div>
+                            <div class="task-header-icons">
+                                <div class="star-ico">
+                                    <span class="material-icons star">
+                                        star_rate
+                                    </span>
+                                </div>
+
+                                <span class="material-icons">
+                                    more_vert
+                                </span>
+                            </div>
+                        </div>
+                        <div class="task-body">
+                            <div class="task-body-progress">
+                                <h4 class="progress" [class.completed]="item.progress==='Completed'">
+                                    {{ item.progress | uppercase }}
+                                </h4>
+                                <h4 class="priority" [class.high]="item.priority==='High Priority'"
+                                    [class.medium]="item.priority==='Medium Priority'">
+                                    {{ item.priority | uppercase }}
+                                </h4>
+                            </div>
+                            <div class="task-body-status">
+                                <div class="task-body-status-text">
+                                    <label>Task Done: </label>
+                                    <span> {{ item.taskStatus }}</span>
+                                </div>
+                                <div class="task-body-status-progress">
+                                    <mat-progress-bar mode="determinate" class="task-progress-bar"
+                                        [class.red-color]="item.taskProgess===75" value="{{ item.taskProgess }}">
+                                    </mat-progress-bar>
+                                </div>
+
+                            </div>
+                            <div class="task-body-apps">
+                                <div class="task-body-app" *ngFor="let app of item.listOfApps"
+                                    [class.green]="app==='IOS APP'" [class.blue]="app==='UI/UX'"
+                                    [class.orange]="app==='ANDROID'">
+                                    {{ app }}
+                                </div>
+                            </div>
+                            <div class="task-body-images">
+                                <img src="{{image}}" alt="" *ngFor="let image of item.images">
+                                <div class="count">
+                                    +17
+                                </div>
+                            </div>
+                            <div class="task-body-date">
+                                {{ item.completionDate | uppercase }}
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="tasks-list">
+                    <div class="my-tasks">
+                        <h2>My Tasks <span>({{ getNotCompletedTasksCount() }})</span></h2>
+                        <div class="my-task" *ngFor="let my of mytaskItesm;let idx=index">
+                            <div class="my-task-text">
+                                <span>{{ idx + 1 }}</span>
+                                <span class="text" [class.isCompleted]="my.isCompleted">{{ my.name }}</span>
+                            </div>
+                            <div class="my-task-icon">
+                                <span class="material-icons" [class.isCompleted]="my.isCompleted">
+                                    {{ my.isCompleted ? 'check_circle': 'check_circle_outline' }}
+                                </span>
+                            </div>
+
+                        </div>
+                    </div>
+
+                    <div class="my-to-dos">
+                        <div class="my-to-do" *ngFor="let todo of mytodoList">
+                            <div class="my-to-do-container">
+                                <div class="my-to-do-container-header">
+                                    <div class="header-text">{{ todo.name }}</div>
+                                    <span class="material-icons">
+                                        slideshow
+                                    </span>
+                                </div>
+
+                                <div class="my-todo-sub" *ngFor="let sub  of todo.subList">
+                                    <div class="my-todo-sub-container" [class.is-active]="sub.isActive">
+                                        <div>
+                                            {{ sub.name }}
+                                        </div>
+                                        <div class="todo-time">
+
+                                            <div>{{ sub.time }}</div>
+                                            <div>
+                                                <span class="material-icons mr-l-10px">
+                                                    slideshow
+                                                </span>
+                                            </div>
+                                            <div>
+                                                <span class="material-icons">
+                                                    more_vert
+                                                </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="cal-and-msgs">
+                    <div class="calendar">
+                        <div class="calendar-header">
+                            <h2>{{ todaysDate | date: 'MMM yyyy' }}</h2>
+                            <span class="material-icons">
+                                play_circle
+                            </span>
+                        </div>
+                        <div class="calendar-days-heading">
+                            <ul class="days-heading-list">
+                                <li class="day" *ngFor="let day of listOfDays">{{ day }}</li>
+                            </ul>
+                        </div>
+                        <div class="calendar-lists">
+                            <ul class="days-heading-list" *ngFor="let row of localDate;let rowIdx = index">
+                                <li class="day" *ngFor="let col of localDate[rowIdx];let colIdx = index"
+                                    [class.current-date]="col.date===currentDate && dateMonth === currentMonth && !col.isDisabled"
+                                    [class.is-disabled]="col.isDisabled" [class.is-active]="!col.isDisabled"
+                                    [class.is-first-child]="col.isFirstChild" [class.is-last-child]="col.isLastChild"
+                                    [class.is-selected]="col.isSelected">
+                                    {{ col.date }}
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="messages">
+                        <div class="messages-header">Messages</div>
+                        <div class="messages-list">
+                            <div class="message" *ngFor="let mess of messagesList">
+                                <div class="image">
+                                    <img src="{{mess.image}}" alt="">
+                                </div>
+                                <div class="message-container">
+                                    <h3>{{ mess.name }}</h3>
+                                    <h4>{{ mess.message }}</h4>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </mat-sidenav-content>
+    </mat-sidenav-container>
+</div>

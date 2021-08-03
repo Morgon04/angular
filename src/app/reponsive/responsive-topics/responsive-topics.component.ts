@@ -96,6 +96,14 @@ export class ResponsiveTopicsComponent implements OnInit {
       {
         name: 'Travel Dashboard',
         url: '/responsive/travel-dashboard'
+      },
+      {
+        name: 'Project Management',
+        url: '/responsive/project-management'
+      },
+      {
+        name: 'Task Management Board',
+        url: '/task-management'
       }
     ];
   }

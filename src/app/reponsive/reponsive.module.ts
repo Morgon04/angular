@@ -10,10 +10,12 @@ import { MatIconModule } from '@angular/material/icon';
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { MatSelectModule } from '@angular/material/select';
 import { MatButtonModule } from '@angular/material/button';
+import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatSidenavModule } from '@angular/material/sidenav';
 import { MatCheckboxModule } from '@angular/material/checkbox';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { MatProgressBarModule } from '@angular/material/progress-bar';
 import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
-
 // Shared Module Import
 import { SharedModule } from '../shared/shared.module';
 
@@ -43,6 +45,9 @@ import { ResponsiveTopicsComponent } from './responsive-topics/responsive-topics
 import { LeadOverviewComponent } from './lead-overview/lead-overview.component';
 import { TravelComponent } from './travel/travel.component';
 import { ProjectManagementToolComponent } from './project-management-tool/project-management-tool.component';
+import { TaskManagementDashboardComponent } from './task-management-dashboard/task-management-dashboard.component';
+import { KnowledgeComponent } from './knowledge/knowledge.component';
+import { PortfolioComponent } from './portfolio/portfolio.component';
 
 
 @NgModule({
@@ -50,25 +55,28 @@ import { ProjectManagementToolComponent } from './project-management-tool/projec
     MsdComponent,
     ListComponent,
     DesignComponent,
+    TravelComponent,
     TicketComponent,
+    ProjectsComponent,
     CalendarComponent,
     ExpensesComponent,
     GotCastsComponent,
     TaskBoardComponent,
     DevelopersComponent,
     CalendarUiComponent,
+    HrDashboardComponent,
+    PaymentsPageComponent,
     TeamMembersComponent,
     CoursesListComponent,
+    LeadOverviewComponent,
     CandidateListComponent,
     AppointmentsListComponent,
     MedicalDashboardComponent,
     ResponsiveTopicsComponent,
-    HrDashboardComponent,
-    ProjectsComponent,
-    PaymentsPageComponent,
-    LeadOverviewComponent,
-    TravelComponent,
     ProjectManagementToolComponent,
+    TaskManagementDashboardComponent,
+    KnowledgeComponent,
+    PortfolioComponent,
   ],
   imports: [
     CommonModule,
@@ -78,10 +86,13 @@ import { ProjectManagementToolComponent } from './project-management-tool/projec
     DragDropModule,
     MatSelectModule,
     MatButtonModule,
+    MatSidenavModule,
+    MatToolbarModule,
     MatCheckboxModule,
     MatProgressBarModule,
     MatProgressSpinnerModule,
-
+    MatSlideToggleModule,
+    
     // Shared Module
     SharedModule,
 

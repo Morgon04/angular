@@ -109,7 +109,11 @@ export class BreadcrumService {
             {
               name: 'Travel',
               url: '/responsive/travel-dashboard'
-            }
+            },
+            {
+              name: 'Project Management',
+              url: '/responsive/project-management'
+            },
           ],
         }
 

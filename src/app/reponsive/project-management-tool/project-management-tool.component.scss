@@ -1,0 +1,511 @@
+@import "~src/assets/styles/variables.scss";
+@import "~src/assets/styles/common.scss";
+
+$le-header-color:#8878ba;
+$le-main-color:#58429d;
+$le-yellow-color:#ffcc83;
+
+.project-management-tool {
+    @extend .display-flex-column;
+    width: 80%;
+    margin: 0 auto;
+    background-color: white;
+    padding: $le-32px;
+
+    box-sizing: border-box;
+
+    h1,
+    h2,
+    h3,
+    h4,
+    h5 {
+        margin: 0;
+    }
+
+    .header {
+        width: 100%;
+        @extend .display-flex;
+        @extend .justify-content-space-between;
+
+        .header-text {
+            @extend .display-flex;
+            justify-content: center;
+            align-items: center;
+            padding: $le-16px;
+            border-radius: $le-10px;
+            background-color: #faf7fc;
+
+            h3 {
+                padding-left: $le-10px;
+                color: $le-header-color;
+            }
+
+            .material-icons {
+                color: $le-header-color;
+            }
+        }
+
+        .header-notification {
+            @extend .display-flex;
+            align-items: center;
+
+            .notification-icon {
+                position: relative;
+
+                .material-icons {
+                    color: #58429d;
+                }
+
+                .circle {
+                    position: absolute;
+                    width: 7px;
+                    height: 7px;
+                    background-color: $le-yellow-color;
+                    border-radius: 50%;
+                    top: 5px;
+                    right: 6px;
+                }
+            }
+
+            .card-image {
+                @extend .display-flex;
+                padding: 0 $le-20px;
+
+                img {
+                    width: 45px;
+                    height: 45px;
+                    border-radius: 50%;
+                }
+            }
+
+            h4 {
+                color: #4f4f4f;
+                font-size: $le-font-size-16px;
+            }
+        }
+    }
+
+    .project-body {
+        @extend .display-flex;
+        width: 100%;
+
+        .project-body-1,
+        .project-body-2 {
+            width: calc(50% - 15px);
+            @extend .display-flex-column;
+            padding: $le-10px;
+            box-sizing: border-box;
+        }
+
+        .project-body-1 {
+            margin-right: $le-15px;
+
+            .task-calendar {
+                width: 100%;
+                @extend .display-flex-column;
+                margin-top: $le-32px;
+
+                .task-calendar-header {
+                    @extend .display-flex;
+                    justify-content: space-between;
+                    align-items: center;
+
+                    .task-calendar-header-text {
+                        @extend .display-flex;
+                        font-size: $le-font-size-44px;
+                        font-weight: $le-font-weight-800;
+                        line-height: $le-font-size-44px;
+                    }
+
+                    .more {
+                        color: #c4c4c4;
+                    }
+                }
+
+                .calendar {
+                    margin: $le-24px auto;
+                    width: 80%;
+
+                    .calendar-days-heading {
+                        margin-top: $le-20px;
+                    }
+
+                    .calendar-lists,
+                    .calendar-days-heading {
+                        display: flex;
+                        padding-bottom: $le-16px;
+
+                        ul {
+                            list-style: none;
+                            padding: 0;
+                            margin: 0;
+                            display: flex;
+                            width: 100%;
+
+                            li {
+                                display: flex;
+                                width: 100%;
+                                justify-content: center;
+
+
+                            }
+                        }
+                    }
+
+
+                    .calendar-lists {
+                        display: flex;
+                        flex-direction: column;
+
+                        ul {
+                            margin: 0.6rem 0;
+
+                            li {
+
+                                padding: 0.4rem 0;
+
+                                &.is-active {
+                                    &:hover {
+                                        background-color: $le-yellow-color;
+                                        border-radius: 50%;
+                                        color: black;
+                                        cursor: pointer;
+                                    }
+                                }
+
+                                &.current-date {
+                                    background-color: $le-yellow-color;
+                                    border-radius: 50%;
+                                }
+
+                                &.is-disabled,
+                                &.is-first-child {
+                                    background-color: transparent;
+                                }
+
+                            }
+                        }
+                    }
+
+                }
+            }
+        }
+
+        .project-body-2 {
+            margin-left: $le-15px;
+        }
+
+        .today-task {
+            @extend .display-flex-column;
+            margin-top: $le-20px;
+
+            .today-task-header {
+                @extend .display-flex;
+                justify-content: space-between;
+                margin-bottom: $le-24px;
+
+                .count {
+                    color: $le-main-color;
+                    font-size: $le-font-size-16px;
+                }
+            }
+
+            .tasks {
+                @extend .display-flex-column;
+                background-color: #faf9fc;
+                padding: $le-24px $le-20px;
+                border-radius: $le-24px;
+
+                .task {
+                    @extend .display-flex;
+                    padding: $le-10px 0;
+
+                    .task-checkbox {
+                        @extend .display-flex;
+                        margin-right: $le-10px;
+
+                        .material-icons {
+                            color: $le-main-color;
+                        }
+                    }
+
+                    .task-item {
+                        @extend .display-flex;
+                        justify-content: space-between;
+                        width: 100%;
+                    }
+
+                    h3,
+                    h4 {
+                        display: flex;
+                        align-items: center;
+                    }
+
+                    h3 {
+                        color: #4f4f4f;
+                        font-size: $le-font-size-18px;
+                    }
+
+                    h4 {
+                        color: #7177ff;
+                    }
+                }
+            }
+        }
+
+        .project-body-2-header {
+            @extend .display-flex;
+            justify-content: space-between;
+            margin-top: $le-20px;
+
+            h4 {
+                @extend .display-flex;
+                align-items: center;
+                color: #ffd7a3;
+            }
+        }
+
+        .notification-content {
+            margin-top: $le-18px;
+            padding: $le-32px;
+            width: 100%;
+            box-sizing: border-box;
+            border-radius: $le-24px;
+            background-color: $le-main-color;
+            @extend .display-flex;
+            position: relative;
+            overflow: hidden;
+
+            .icon {
+                @extend .display-flex;
+                padding: $le-8px;
+                background-color: #7968b1;
+                border-radius: $le-4px;
+                max-height: $le-24px;
+
+                .material-icons {
+                    color: white;
+                }
+            }
+
+            .notification-list {
+                @extend .display-flex-column;
+
+                padding-left: $le-32px;
+
+                h3,
+                h4,
+                h5 {
+                    color: white;
+                }
+
+                h3 {
+                    font-size: $le-font-size-18px;
+                    font-weight: normal;
+                }
+
+                h3,
+                h4 {
+                    margin-bottom: $le-10px;
+                }
+
+                h4 {
+                    font-size: $le-font-size-14px;
+                    color: #b5aecc;
+                }
+
+                h5 {
+                    padding: $le-5px $le-20px;
+                    border-radius: $le-8px;
+                    background-color: #ffcc83;
+                    width: max-content;
+                }
+
+                .circle {
+                    position: absolute;
+                    border-radius: 50%;
+                    border: 2px solid #8a7abb;
+                }
+
+                .circle-1 {
+                    bottom: -32px;
+                    right: -15px;
+                    width: 120px;
+                    height: 120px;
+                }
+
+                .circle-2 {
+                    bottom: -30px;
+                    right: 6px;
+                    width: 85px;
+                    height: 85px;
+                }
+            }
+        }
+
+        .team-chat {
+
+            margin-top: $le-32px;
+            @extend .display-flex-column;
+
+            .team-chat-header {
+                @extend .display-flex;
+                justify-content: space-between;
+                padding: $le-10px 0;
+
+                .team-chat-header-text {
+                    @extend .display-flex;
+                    align-items: center;
+
+                    .images {
+                        margin-left: $le-10px;
+                        @extend .display-flex;
+                        align-items: center;
+
+                        img {
+                            width: 45px;
+                            height: 45px;
+                            border-radius: 50%;
+
+                            &:not(.last) {
+                                margin-right: -9px;
+                            }
+
+                            &.last {
+                                z-index: 2;
+                            }
+                        }
+
+                        .count {
+                            width: 40px;
+                            height: 40px;
+                            border-radius: 50%;
+                            margin-left: -2px;
+                            background-color: #faf9fc;
+                            font-size: $le-font-size-12px;
+                            color: $le-main-color;
+                            @extend .display-flex-content-center;
+                        }
+                    }
+                }
+
+                .invitie-btn {
+                    @extend .display-flex;
+                    align-items: center;
+                    color: white;
+                    padding: $le-8px $le-16px;
+                    background-color: $le-main-color;
+                    border-radius: $le-8px;
+                    font-size: $le-font-size-12px;
+
+                    .material-icons {
+                        margin-right: $le-10px;
+                    }
+                }
+
+
+            }
+
+            .chat-box {
+                margin-top: $le-20px;
+                padding: $le-24px;
+                border-radius: $le-20px;
+                background-color: #faf9fc;
+
+                .chat-box-items {
+                    @extend .display-flex-column;
+
+
+                    .chat-box-item {
+                        @extend .display-flex;
+                        margin-bottom: $le-20px;
+
+                        .image {
+                            img {
+                                width: 40px;
+                                height: 40px;
+                                border-radius: 50%;
+                            }
+                        }
+
+                        & .message {
+                            @extend .display-flex-column;
+                            margin-left: $le-20px;
+
+                            .message-text {
+                                padding: $le-10px;
+                                max-width: 200px;
+                                background-color: white;
+                                font-size: $le-font-size-14px;
+                                font-weight: normal;
+                                line-height: 1.5;
+                                border-radius: 0 $le-20px $le-20px $le-20px;
+
+                                &.even {
+                                    border-radius: $le-20px 0 $le-20px $le-20px;
+                                    background-color: #ececfc;
+                                }
+                            }
+
+                            h4 {
+                                display: flex;
+                                color: #c8c8c9;
+                                font-size: $le-font-size-12px;
+                                font-weight: 300;
+                            }
+                        }
+                    }
+                }
+
+                .is-flex-end {
+                    justify-content: flex-end;
+                }
+
+                .send-box {
+                    width: 100%;
+                    box-sizing: border-box;
+                    background-color: white;
+                    padding: $le-12px;
+                    @extend .display-flex;
+                    justify-content: space-between;
+                    border-radius: $le-8px;
+
+                    div {
+                        @extend .display-flex;
+                        align-items: center;
+                    }
+
+                    .material-icons,
+                    .type {
+                        color: #b3b3b3;
+                    }
+
+                    .type {
+                        font-size: $le-font-size-12px;
+                        font-weight: 200;
+                        margin-left: $le-20px;
+                    }
+
+                    .send {
+                        color: $le-main-color;
+                        margin-left: $le-10px;
+                    }
+
+                }
+            }
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .project-management-tool {
+        width: 100%;
+    }
+}
+
+@media (min-width:1600px) {
+    .project-management-tool {
+        width: 80%;
+    }
+
+}

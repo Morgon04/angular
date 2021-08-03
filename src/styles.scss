@@ -12,7 +12,7 @@ body {
 body {
     margin: 0;
     font-family: 'Roboto', "Helvetica Neue", sans-serif;
-    background-color: #f5f7fa;
+    background-color: white;
 }
 
 .container {
@@ -81,6 +81,19 @@ body {
 .mat-progress-bar.team-progress .mat-progress-bar-fill::after {
     background-color: #0084fd;
 }
+
+.mat-progress-bar.task-progress-bar {
+    border-radius: 8px;
+}
+
+.mat-progress-bar.task-progress-bar .mat-progress-bar-fill::after {
+    background-color: #545ead;
+}
+
+.mat-progress-bar.red-color .mat-progress-bar-fill::after {
+    background-color: #e257b3;
+}
+
 
 .mat-progress-bar.follow-up-bar .mat-progress-bar-fill::after {
     background-color: #018eff;
@@ -167,6 +180,14 @@ body {
 
     &.md-30 {
         font-size: 30px;
+    }
+
+    &.md-32 {
+        font-size: 32px;
+    }
+
+    &.md-44 {
+        font-size: 44px;
     }
 }
 
