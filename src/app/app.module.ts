@@ -13,6 +13,7 @@ import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 import { AuthenticationModule } from './authentication/authentication.module';
 
+
 // App Component Import
 import { AppComponent } from './app.component';
 
@@ -23,7 +24,7 @@ import { HtmlComponent } from './html/html.component';
 @NgModule({
   declarations: [
     AppComponent,
-    HtmlComponent, // 1. Component 2. Directives 3. Pipes
+    HtmlComponent // 1. Component 2. Directives 3. Pipes
   ],
   imports: [ // 1.Angular Module 2.Feature Module
     BrowserModule,

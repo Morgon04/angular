@@ -1,6 +1,8 @@
-import { TaskManagementDashboardComponent } from './reponsive/task-management-dashboard/task-management-dashboard.component';
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule, ExtraOptions } from '@angular/router';
+
+import { PortfolioComponent } from './reponsive/portfolio/portfolio.component';
+import { TaskManagementDashboardComponent } from './reponsive/task-management-dashboard/task-management-dashboard.component';
 const routerOptions: ExtraOptions = {
   scrollPositionRestoration: 'enabled',
   anchorScrolling: 'enabled',
@@ -34,6 +36,11 @@ const appRoutes: Routes = [
     path: 'task-management',
     component: TaskManagementDashboardComponent
   },
+  {
+    path:'portfolio',
+    component: PortfolioComponent,
+    data: { title: 'Portfolio Dashboard'}
+},
   { path: '**', redirectTo: '/dashboard', pathMatch: 'full' },
 ];
 

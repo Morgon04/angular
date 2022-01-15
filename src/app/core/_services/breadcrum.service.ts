@@ -114,6 +114,10 @@ export class BreadcrumService {
               name: 'Project Management',
               url: '/responsive/project-management'
             },
+            {
+              name: 'PDF Viewer',
+              url: '/responsive/pdf-viewer'
+            }
           ],
         }
 

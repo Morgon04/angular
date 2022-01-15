@@ -104,6 +104,14 @@ export class ResponsiveTopicsComponent implements OnInit {
       {
         name: 'Task Management Board',
         url: '/task-management'
+      },
+      {
+        name: 'Portfolio Dashboard',
+        url: '/portfolio'
+      },
+      {
+        name: 'PDF Viewer',
+        url: '/responsive/pdf-viewer'
       }
     ];
   }

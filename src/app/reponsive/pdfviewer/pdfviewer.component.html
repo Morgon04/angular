@@ -1,0 +1,7 @@
+<div class="pdf-container">
+    <div>
+        <button mat-button color="primary" (click)="downloadPdf()">Download</button>
+    </div>
+    <pdf-viewer [src]="pdfSrc" [(page)]="page" (after-load-complete)="afterLoadComplete($event)" [render-text]='false'
+        style="display: block" [original-size]="false" [fit-to-page]="true"></pdf-viewer>
+</div>

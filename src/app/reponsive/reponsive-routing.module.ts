@@ -1,4 +1,3 @@
-import { ProjectManagementToolComponent } from './project-management-tool/project-management-tool.component';
 import { HtmlComponent } from './../html/html.component';
 // Angular Import
 import { NgModule } from '@angular/core';
@@ -29,6 +28,8 @@ import { CandidateListComponent } from './candidate-list/candidate-list.componen
 import { ResponsiveTopicsComponent } from './responsive-topics/responsive-topics.component';
 import { AppointmentsListComponent } from './appointments-list/appointments-list.component';
 import { MedicalDashboardComponent } from './medical-dashboard/medical-dashboard.component';
+import { ProjectManagementToolComponent } from './project-management-tool/project-management-tool.component';
+import { PdfviewerComponent } from './pdfviewer/pdfviewer.component';
 
 const responsiveRoutes: Routes = [
   ShellService.child(
@@ -152,7 +153,12 @@ const responsiveRoutes: Routes = [
             path: 'project-management',
             component: ProjectManagementToolComponent,
             data: { title: 'Project Management'}
-          }
+          },
+          {
+            path: 'pdf-viewer',
+            component: PdfviewerComponent,
+            data: { title: 'PDF Viewer'}
+          }   
         ]
       }
     ]

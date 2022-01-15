@@ -1,0 +1,33 @@
+pdf-viewer {
+    height: 100vh;
+}
+
+.pdf-container {
+    display: flex;
+    flex-direction: column;
+
+    &:first-child {
+        margin-bottom: 20px;
+        display: flex;
+        justify-content: flex-end;
+        width: 100%;
+    }
+}
+
+.selected
+
+    {
+        background-color: red !important;
+        &::before {
+        
+            border-radius: 50%;
+            height: 50%;
+            left: 30%;
+            top: 20%;
+            width: 50%;
+            background-color: #000;
+            content: "";
+            display: block;
+            position: absolute;
+        }
+    }
